@@ -1,0 +1,35 @@
+{
+    "name": "ethanjohnstone/report",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Ethan Johnstone",
+            "email": "ethanjohnstone0911@gmail.com"
+        }
+    ],
+    "require": {
+        "silverstripe/recipe-cms": "^4.2",
+        "symbiote/silverstripe-gridfieldextensions": "^3.2",
+        "wilr/silverstripe-googlesitemaps": "^2.1",
+        "bummzack/sortablefile": "^2.1",
+        "jonom/focuspoint": "^3.0",
+        "undefinedoffset/sortablegridfield": "^2.0",
+        "silverstripe/redirectedurls": "^2.0"
+    },
+    "extra": {
+        "project-files-installed": [
+            "app/.htaccess",
+            "app/_config.php",
+            "app/_config/mysite.yml",
+            "app/src/Page.php",
+            "app/src/PageController.php"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "web.config"
+        ]
+    }
+}

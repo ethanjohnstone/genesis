@@ -1,0 +1,22 @@
+{
+  "name": "base-project",
+  "version": "1.0.0",
+  "description": "Ye ol basic project starter kit",
+  "main": "index.js",
+  "author": "ethanjohnstone",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "browser-sync-webpack-plugin": "2.0.1",
+    "css-mqpacker": "^5.0.1",
+    "hamburgers": "^0.9.1",
+    "laravel-mix": "^2.1.11",
+    "normalize-scss": "^6.0.0",
+    "postcss-flexbugs-fixes": "^2.1.0"
+  }
+}
