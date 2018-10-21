@@ -15,9 +15,6 @@ SilverStripe\Assets\Image:
   allowed_extensions:
     - svg
 
-SilverStripe\Core\Manifest\ModuleManifest:
-  project: app
-
 SilverStripe\Core\Injector\Injector:
   SilverStripe\View\Requirements_Backend:
     properties:

@@ -1,5 +1,5 @@
 {
-    "name": "ethanjohnstone/report",
+    "name": "ethanjohnstone/genesis",
     "type": "project",
     "authors": [
         {
@@ -14,7 +14,8 @@
         "bummzack/sortablefile": "^2.1",
         "jonom/focuspoint": "^3.0",
         "undefinedoffset/sortablegridfield": "^2.0",
-        "silverstripe/redirectedurls": "^2.0"
+        "silverstripe/redirectedurls": "^2.0",
+        "silverstripe/subsites": "^2.1"
     },
     "extra": {
         "project-files-installed": [

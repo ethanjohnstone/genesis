@@ -1,0 +1,6 @@
+---
+name: wysiwyg
+---
+SilverStripe\Forms\HTMLEditor\TinyMCEConfig:
+  editor_css:
+    - 'app/css/editor.css'
