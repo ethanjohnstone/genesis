@@ -22,7 +22,7 @@ mix.js('javascript/src/app.js', 'javascript/')
         processCssUrls: false
     })
     .browserSync({
-        proxy: 'report.test',
+        proxy: 'genesis.test',
         injectChanges: true,
         files: ['css/app.css'],
         notify: false

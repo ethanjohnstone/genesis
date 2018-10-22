@@ -16,3 +16,19 @@ body {
 body {
   margin: 0;
 }
+
+.container{
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $medium) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $large) {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

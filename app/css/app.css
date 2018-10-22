@@ -2130,6 +2130,11 @@ body {
   margin: 0;
 }
 
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 dl {
   margin: 0;
 }
@@ -2229,4 +2234,19 @@ hr {
   border-right: 0;
   border-top: 0;
   margin: 1.5em 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

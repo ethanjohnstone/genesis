@@ -75,7 +75,6 @@
 <body class="$ClassName" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
     <% include Header %>
 <div class="main" role="main">
-    $Form
     $Layout
 </div>
     <% include Footer %>

@@ -6,7 +6,7 @@ SilverStripe\Core\Manifest\ModuleManifest:
 
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
-    - SiteConfigExtension
+    - Genesis\SiteConfigExtension
 
 SilverStripe\Assets\File:
   allowed_extensions: [svg, js]
