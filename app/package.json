@@ -18,5 +18,6 @@
     "laravel-mix": "^2.1.11",
     "normalize-scss": "^6.0.0",
     "postcss-flexbugs-fixes": "^2.1.0"
-  }
+  },
+  "dependencies": {}
 }
