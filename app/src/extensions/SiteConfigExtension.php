@@ -38,9 +38,9 @@ class SiteConfigExtension extends DataExtension
     ];
 
     private static $has_many = [
-        'FooterLogos' => 'FooterLogo',
-        'QuickLinks' => 'QuickLink',
-        'FooterLinks' => 'FooterLink'
+        'FooterLogos' => FooterLogo::class,
+        'QuickLinks' => QuickLink::class,
+        'FooterLinks' => FooterLink::class
     ];
 
     private static $owns = [
