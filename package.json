@@ -4,6 +4,7 @@
   "description": "Ye ol basic project starter kit",
   "main": "index.js",
   "author": "ethanjohnstone",
+  "public": false,
   "scripts": {
     "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",

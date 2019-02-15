@@ -1,0 +1,15 @@
+# https://editorconfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Linux line endings and final newline
+[*]
+end_of_line = lf
+
+# UTF-8, 4-space-tabs and no trailing whitespace
+[*.{js,css,scss,php,html,ss}]
+charset = utf-8
+indent_size = 4
+indent_style = space
+trim_trailing_whitespace = true
