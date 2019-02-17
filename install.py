@@ -35,11 +35,11 @@ def replace_in_file (filename, text, replacement_text):
             print(line.replace(text, replacement_text), end='')
 
 # Print steps
-def step (number, text):
+def step (number, text, end="..."):
     grayColor = "\033[90m"
     resetColor = "\033[39m"
     startText = ("\n" if number>1 else "")
-    print ("{}{}{}. {}...{}".format (startText, grayColor, number, text, resetColor))
+    print ("{}{}{}. {}{}{}".format (startText, grayColor, number, text, end, resetColor))
 
 # Copy env file
 step(1, "Creating .env file")
@@ -69,7 +69,6 @@ params = query_user_data(data={
 
 # Replace variables
 for param, value in params.items():
-    print ("Replacing param '{}'...".format (param))
     text = ("{{" + param + "}}")
     for file in files:
         replace_in_file (filename=file, text=text, replacement_text=value)
@@ -81,6 +80,7 @@ subprocess.check_output(["composer", "install"])
 # Install NPM dependencies
 step (4, "Installing NPM dependencies")
 subprocess.check_output(["npm", "install"])
+subprocess.check_output(["npm", "run", "watch"])
 
 # Done
-step (5, "You're all set!\n\nPlease verify the integrity of the created system before proceeding and delete this file.")
+step (5, "You're all set!\nPlease verify the integrity of the created system before proceeding and delete this file.\nRun 'npm run watch' from here.", end="")

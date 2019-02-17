@@ -27,7 +27,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <% require themedCSS('css/app') %>
+    <% require themedCSS('css/dist/app') %>
 
     <%-- Fav icons, etc --%>
     <% include MetaIcons %>
@@ -78,7 +78,7 @@
         $Layout
     </div>
     <% include Footer %>
-    <% require themedJavascript('javascript/app') %>
+    <% require themedJavascript('javascript/dist/app') %>
 </body>
 </html>
 

@@ -1,5 +1,5 @@
 ---
-Name: emailconfig
+Name: email
 After:
   - '#emailconfig'
 ---

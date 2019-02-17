@@ -24,7 +24,7 @@ mix
     .browserSync({
         proxy: localProxy,
         injectChanges: true,
-        files: ['app/css/app.css'],
+        files: ['app/css/dist/app.css'],
         notify: false
     });
 

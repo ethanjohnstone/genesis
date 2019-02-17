@@ -1,5 +1,5 @@
 {
-    "/javascript/app.js": "/javascript/app.js",
-    "/css/app.css": "/css/app.css",
-    "/css/editor.css": "/css/editor.css"
+    "/javascript/dist/app.js": "/javascript/dist/app.js",
+    "/css/dist/app.css": "/css/dist/app.css",
+    "/css/dist/editor.css": "/css/dist/editor.css"
 }
