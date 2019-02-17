@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import fileinput
 import os
 import glob
@@ -61,6 +63,8 @@ files = get_files (exclude=[
 params = query_user_data(data={
     "name": "Name of this project (lowercase & dashed)",
     "namespace": "PHP project namespace",
+    "author_name": "Name of the author",
+    "author_email": "EMail address of the author",
     "db_host": "Database host",
     "db_user": "Database user",
     "db_pass": "Database password",
@@ -80,7 +84,6 @@ subprocess.check_output(["composer", "install"])
 # Install NPM dependencies
 step (4, "Installing NPM dependencies")
 subprocess.check_output(["npm", "install"])
-subprocess.check_output(["npm", "run", "watch"])
 
 # Done
 step (5, "You're all set!\nPlease verify the integrity of the created system before proceeding and delete this file.\nRun 'npm run watch' from here.", end="")

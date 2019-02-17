@@ -3,8 +3,8 @@
     "type": "project",
     "authors": [
         {
-            "name": "Black Sheep Creative",
-            "email": "support@baa.nz"
+            "name": "{{author_name}}",
+            "email": "{{author_email}}"
         }
     ],
     "require": {
