@@ -1,6 +1,8 @@
 import fileinput
 import os
 import glob
+import subprocess
+from shutil import copyfile
 
 # Parse arguments
 def query_user_data (data = {}):
@@ -30,29 +32,55 @@ def get_files (exclude = []):
 def replace_in_file (filename, text, replacement_text):
     with fileinput.FileInput(filename, inplace=True) as lines:
         for line in lines:
-            print(line.replace("{{" + text + "}}", replacement_text), end='')
+            print(line.replace(text, replacement_text), end='')
 
-# Print intro
-print ("Installing SilverStripe...\n")
+# Print steps
+def step (number, text):
+    grayColor = "\033[90m"
+    resetColor = "\033[39m"
+    startText = ("\n" if number>1 else "")
+    print ("{}{}{}. {}...{}".format (startText, grayColor, number, text, resetColor))
+
+# Copy env file
+step(1, "Creating .env file")
+current_path = os.path.dirname(os.path.abspath(__file__))
+copyfile(os.path.join (current_path, ".env.example"), os.path.join (current_path, ".env"))
+
+# Insert template data
+step (2, "Filling template data")
 
 # Grab all files
 files = get_files (exclude=[
     ".git",
     "install.py",
-    "README.md"
+    "README.md",
+    ".env.example"
 ])
 
 # Grab all necessary data
 params = query_user_data(data={
-    "name": "Name of this project",
-    "title": "HTML default title of this project"
+    "name": "Name of this project (lowercase & dashed)",
+    "namespace": "PHP project namespace",
+    "db_host": "Database host",
+    "db_user": "Database user",
+    "db_pass": "Database password",
+    "db_name": "Database name"
 })
 
 # Replace variables
 for param, value in params.items():
     print ("Replacing param '{}'...".format (param))
+    text = ("{{" + param + "}}")
     for file in files:
-        replace_in_file (filename=file, text=("{{" + param + "}}"), replacement_text=value)
+        replace_in_file (filename=file, text=text, replacement_text=value)
+
+# Install composer dependencies
+step (3, "Installing composer dependencies")
+subprocess.check_output(["composer", "install"])
+
+# Install NPM dependencies
+step (4, "Installing NPM dependencies")
+subprocess.check_output(["npm", "install"])
 
 # Done
-print ("Done")
+step (5, "You're all set!\n\nPlease verify the integrity of the created system before proceeding and delete this file.")

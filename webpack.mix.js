@@ -1,8 +1,7 @@
 let mix = require('laravel-mix');
 
 // Hot reloading URL
-let localProxy = 'genesis.test';
-
+let localProxy = '{{name}}.test';
 
 mix
     // Combines and transpiles JavaScript

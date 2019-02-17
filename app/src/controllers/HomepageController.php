@@ -1,9 +1,6 @@
 <?php
 
-namespace Genesis;
+namespace {{namespace}};
 use PageController;
 
-class HomepageController extends PageController
-{
-
-}
+class HomepageController extends PageController {}
