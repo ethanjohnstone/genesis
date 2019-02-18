@@ -1,6 +1,6 @@
 <?php
 
-namespace Genesis;
+namespace {{namespace}};
 
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;

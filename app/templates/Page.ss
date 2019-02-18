@@ -27,7 +27,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <% require themedCSS('css/app') %>
+    <% require themedCSS('css/dist/app') %>
 
     <%-- Fav icons, etc --%>
     <% include MetaIcons %>
@@ -74,11 +74,11 @@
 </head>
 <body class="$ClassName" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
     <% include Header %>
-<div class="main" role="main">
-    $Layout
-</div>
+    <div class="main" role="main">
+        $Layout
+    </div>
     <% include Footer %>
-    <% require themedJavascript('javascript/app') %>
+    <% require themedJavascript('javascript/dist/app') %>
 </body>
 </html>
 

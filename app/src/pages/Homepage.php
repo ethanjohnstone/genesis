@@ -1,10 +1,6 @@
 <?php
 
-namespace Genesis;
-
+namespace {{namespace}};
 use Page;
 
-class Homepage extends Page
-{
-
-}
+class Homepage extends Page {}

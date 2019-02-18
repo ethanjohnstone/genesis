@@ -1,6 +1,7 @@
 <?php
 
-namespace Genesis;
+// @ts-ignore
+namespace {{namespace}};
 
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\GridField\GridField;

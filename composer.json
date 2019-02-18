@@ -1,10 +1,10 @@
 {
-    "name": "ethanjohnstone/genesis",
+    "name": "{{name}}",
     "type": "project",
     "authors": [
         {
-            "name": "Ethan Johnstone",
-            "email": "ethanjohnstone0911@gmail.com"
+            "name": "{{author_name}}",
+            "email": "{{author_email}}"
         }
     ],
     "require": {
@@ -14,14 +14,13 @@
         "bummzack/sortablefile": "^2.1",
         "jonom/focuspoint": "^3.0",
         "undefinedoffset/sortablegridfield": "^2.0",
-        "silverstripe/redirectedurls": "^2.0",
-        "silverstripe/subsites": "^2.1"
+        "silverstripe/redirectedurls": "^2.0"
     },
     "extra": {
         "project-files-installed": [
             "app/.htaccess",
             "app/_config.php",
-            "app/_config/mysite.yml",
+            "app/_config/app.yml",
             "app/src/Page.php",
             "app/src/PageController.php"
         ],

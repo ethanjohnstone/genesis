@@ -1,6 +1,24 @@
-app/node_modules
-resources
-/vendor/
+# Ignore OS-specific files
+.DS_Store 
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ignore package folders
+node_modules/
+resources/
+vendor/
+
+# Ignore assets
 assets
+
+# Ignore sensitive files
 .env
+
+# Ignore editor-related files
 .idea
+.eclipse
+
+# Ignore distribution folders
+dist/
