@@ -1,0 +1,7 @@
+@mixin padding ($y-spacing: 6rem, $x-spacing: 10%) {
+    padding: $y-spacing * (2/3) $x-spacing * (2/3);
+
+    @include media($breakpoint-large) {
+        padding: $y-spacing $x-spacing;
+    }
+}

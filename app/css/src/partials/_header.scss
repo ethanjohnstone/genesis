@@ -1,241 +1,36 @@
-/*
-Variables
-*/
-$header-background-color: white;
-$navigation-font-size-sm: 14px;
-$navigation-font-color: #373d46;
-$navigation-font-weight: normal;
-$navigation-font-weight-active: 500;
-$navigation-border-active: 2px solid transparent;
-$navigation-border-active-color: #373d46;
-$navigation-border-color: #373d46;
-$phone-font-color: $action-color;
-$navigation-spacing: 26px;
-$nav-cover: "true";
-$logo-centered: "false";
-
-/*
-  Code
- */
-.header-container {
-  background: $header-background-color;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.19);
-}
-
 .header {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: auto;
-  max-width: 1290px;
-  padding: 15px 5px 15px 20px;
-  position: relative;
-  width: 100%;
-  min-height: 84px;
-
-  .logo a {
-    display: block;
-    text-align: center;
-
-    img {
-      vertical-align: top;
-    }
-  }
-
-  @media (min-width: $large) {
-    flex-wrap: nowrap;
-    min-height: inherit;
-    padding-left: 25px;
-    padding-right: 15px;
-
-    .logo {
-      min-width: 200px;
-    }
-  }
-}
-
-.hamburger-container {
-  .hamburger {
-    padding: 12px 15px 6px;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: none;
-      outline: none;
-    }
-  }
-  @media (min-width: $large) {
-    display: none;
-  }
-}
-
-.navigation {
-  display: none;
-  padding-right: 15px;
-  width: 100%;
-
-  &.is-active {
-    display: block;
-
-    @if $nav-cover == "true" {
-      position: absolute;
-      top: 84px;
-      width: 100%;
-      background-color: white;
-      padding: 0;
-      left: 0;
-      box-shadow: 0 4px 2px -3px rgba(0, 0, 0, 0.09);
-    }
-
-    @media (min-width: $large) {
-      display: flex;
-    }
-  }
-
-  ul {
-    margin: 45px 0 13px;
-    padding: 0;
-    list-style-type: none;
-
-    @media (min-width: $large) {
-      display: flex;
-      margin: 0 16px 0 0;
-    }
-  }
-
-  li {
-    a {
-      color: $navigation-font-color;
-      display: block;
-      font-size: $navigation-font-size-sm;
-      padding: 11px;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      &:active,
-      &:focus {
-        font-weight: $navigation-font-weight-active;
-        outline: none;
-
-        @media (min-width: $large) {
-          font-weight: normal;
-        }
-      }
-    }
-
-    span {
-      border-bottom: $navigation-border-active;
-      padding-bottom: 8px;
-      transition: opacity $base-duration;
-      //transition: border-color $base-duration, opacity $base-duration;
-    }
-
-    &.current,
-    &.section {
-      a {
-        font-weight: $navigation-font-weight-active;
-      }
-
-      span {
-        border-color: $navigation-border-active-color;
-      }
-    }
-
-    &:hover {
-      span {
-        //border-color: $navigation-font-color;
-        opacity: 0.6;
-      }
-    }
-
-    @media (min-width: $large) {
-      a {
-        padding: 20px $navigation-spacing/2;
-      }
-    }
-  }
-
-  .phone {
-    color: $phone-font-color;
-    display: block;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 25px;
-    text-align: center;
-    text-decoration: none;
-
-    &:hover {
-      color: shade($action-color, 25%);
-    }
-
-    &:focus {
-      outline: $focus-outline;
-      outline-offset: $focus-outline-offset;
-    }
-
-    @media (min-width: $large) {
-      margin-bottom: 0;
-      margin-right: $navigation-spacing/2;
-    }
-  }
-
-  @media (min-width: $large) {
-    .mobile-only {
-      display: none;
-    }
-
-    align-items: center;
+    @include padding ($y-spacing: 3rem);
     display: flex;
-    justify-content: flex-end;
-    width: auto;
-
-    @if $logo-centered == "true" {
-      width: 100%;
-
-      &:first-of-type {
-        justify-content: flex-start;
-      }
-    }
-  }
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-medium-gray;
 }
 
-.header .social-media {
-  margin-bottom: 25px;
-  text-align: center;
-  transition: $base-duration $base-timing;
+.header__logo {
+    max-width: 15%;
+}
 
-  a {
-    display: inline-block;
-    padding: 0 6px;
-    text-decoration: none;
+.header__links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
 
-    img {
-      vertical-align: middle;
+.header__link {
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+
+    & + & {
+        margin-left: 2rem;
     }
-  }
 
-  @media (min-width: $large) {
-    margin: 0 10px;
+    &.header__link--active {
+        border-bottom: 1px solid black;
+    }
 
     a {
-      padding: 6px 6px 10px;
+        color: inherit;
+        text-decoration: none;
     }
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-}
-
-.header .call-to-action {
-  margin-bottom: 50px;
-  text-align: center;
-
-  @media (min-width: $large) {
-    margin-bottom: 0;
-    margin-left: $navigation-spacing/2;
-  }
 }
