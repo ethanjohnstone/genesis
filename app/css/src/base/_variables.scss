@@ -2,67 +2,32 @@
 $default-feature: min-width; // Default @media feature for the media() mixin
 
 // Breakpoints
-$medium: 768px;
-$large: 1200px;
+$breakpoint-medium: 600px;
+$breakpoint-large: 1200px;
+$breakpoint-huge: 1800px;
 
 // Typography
-$base-font-family: (
-        -apple-system,
-        BlinkMacSystemFont,
-        "Avenir Next",
-        "Avenir",
-        "Segoe UI",
-        "Lucida Grande",
-        "Helvetica Neue",
-        "Helvetica",
-        "Fira Sans",
-        "Roboto",
-        "Noto",
-        "Droid Sans",
-        "Cantarell",
-        "Oxygen",
-        "Ubuntu",
-        "Franklin Gothic Medium",
-        "Century Gothic",
-        "Liberation Sans",
-        sans-serif,
+$font-family: (
+    "Avenir",
+    sans-serif
 );
-$heading-font-family: $base-font-family;
-
-// Line height
-$base-line-height: 1.5;
-$heading-line-height: 1.2;
-
-// Other Sizes
-$base-border-radius: 3px;
-$base-spacing: 1.5em;
-$small-spacing: $base-spacing / 2;
-$base-z-index: 0;
 
 // Colors
-$blue: #1565c0;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$color-light-green: #41AD49;
+$color-dark-green: #2A6E2F;
+$color-yellow: #FEDA00;
+$color-light-gray: #F7F7F7;
+$color-medium-gray: #EAEAEA;
+$color-darkish-gray: #9B9B9B;
+$color-dark-gray: #58595B;
+$color-bright: #F4F4F4;
+$color-black: black;
 
-// Font Colors
-$base-font-color: $dark-gray;
-$action-color: $blue;
+// Font weights
+$font-light: 300;
+$font-regular: 400;
+$font-bold: 700;
+$font-black: 900;
 
-// Border
-$base-border-color: $light-gray;
-$base-border: 1px solid $base-border-color;
-
-// Background Colors
-$base-background-color: #fff;
-$secondary-background-color: tint($base-border-color, 75%);
-
-// Focus
-$focus-outline-color: transparentize($action-color, 0.4);
-$focus-outline-width: 3px;
-$focus-outline: $focus-outline-width solid $focus-outline-color;
-$focus-outline-offset: 2px;
-
-// Animations
-$base-duration: 150ms;
-$base-timing: ease;
+// Other settings
+$border-radius: 4px;
