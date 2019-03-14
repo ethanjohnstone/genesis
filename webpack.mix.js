@@ -9,7 +9,6 @@ mix
 
     // Transpiles SCSS
     .sass('app/css/src/app.scss', 'app/css/dist/')
-    .sass('app/css/src/editor.scss', 'app/css/dist/')
 
     // Set WebPack options
     .options({
