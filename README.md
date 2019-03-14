@@ -7,7 +7,9 @@
 4. Verify the project integrity and then run `npm run watch` (or `yarn watch`)
 5. You're all set!
 
-> git clone https://github.com/ethanjohnstone/genesis
-> cd genesis
-> ./install.py
-> npm run watch
+```
+$ git clone https://github.com/ethanjohnstone/genesis
+$ cd genesis/
+$ python3 ./install.py
+$ npm run watch
+```
