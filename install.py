@@ -3,6 +3,7 @@
 import fileinput
 import os
 import glob
+import sys
 import subprocess
 from shutil import copyfile
 
@@ -86,4 +87,7 @@ step (4, "Installing NPM dependencies")
 subprocess.check_output(["npm", "install"])
 
 # Done
-step (5, "You're all set!\nPlease verify the integrity of the created system before proceeding and delete this file.\nRun 'npm run watch' from here.", end="")
+step (5, "You're all set!\nPlease verify the integrity of the created system before proceeding.\nRun 'npm run watch' from here.", end="")
+
+# Self-destruct
+os.remove (sys.argv [0])
