@@ -30,7 +30,7 @@
     <% include MetaIcons %>
 
     <%-- Open Graph --%>
-    <% include OpenGraph %>
+    <% include OpenGraph Data=$Top %>
 </head>
 <body class="body">
     <% include Header %>
