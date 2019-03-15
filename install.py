@@ -19,6 +19,19 @@ def query_user_data (data = {}):
 
     return data
 
+# Ask questions
+def question_user (data = {}):
+    cyanColor = "\033[36m"
+    grayColor = "\033[90m"
+    resetColor = "\033[39m"
+
+    for key, value in data.items ():
+        print ("> {}{}: {}(y/n){}".format (cyanColor, value, grayColor, resetColor), end=" ")
+        user_input = input ()
+        data [key] = user_input == "y"
+
+    return data
+
 # Grab all files
 def get_files (exclude = []):
     current_path = os.path.dirname(os.path.abspath(__file__))
@@ -38,19 +51,22 @@ def replace_in_file (filename, text, replacement_text):
             print(line.replace(text, replacement_text), end='')
 
 # Print steps
-def step (number, text, end="..."):
+stepNumber = 1
+def step (text, end="..."):
+    global stepNumber
     grayColor = "\033[90m"
     resetColor = "\033[39m"
-    startText = ("\n" if number>1 else "")
-    print ("{}{}{}. {}{}{}".format (startText, grayColor, number, text, end, resetColor))
+    startText = ("\n" if stepNumber>1 else "")
+    print ("{}{}{}. {}{}{}".format (startText, grayColor, stepNumber, text, end, resetColor))
+    stepNumber += 1
 
 # Copy env file
-step(1, "Creating .env file")
+step("Creating .env file")
 current_path = os.path.dirname(os.path.abspath(__file__))
 copyfile(os.path.join (current_path, ".env.example"), os.path.join (current_path, ".env"))
 
 # Insert template data
-step (2, "Filling template data")
+step ("Filling template data")
 
 # Grab all files
 files = get_files (exclude=[
@@ -78,16 +94,37 @@ for param, value in params.items():
     for file in files:
         replace_in_file (filename=file, text=text, replacement_text=value)
 
+# Query dependencies
+step ("Collecting dependency requirements")
+
+dependency_results = question_user(data={
+    "symbiote/silverstripe-gridfieldextensions#^3.2": "GridField Extensions",
+    "bummzack/sortablefile#^2.1": "Sortable Files",
+    "undefinedoffset/sortablegridfield#^2.0": "Sortable GridFields",
+    "jonom/focuspoint#^3.0": "FocusPoint",
+    "wilr/silverstripe-googlesitemaps#^2.1": "Google Sitemaps"
+})
+
+package_json = ""
+for package, value in dependency_results.items ():
+    if value:
+        package_data = package.split("#")
+        package_name, package_version = package_data[0], package_data[1]
+        package_json += '"{}": "{}"{}\n'.format (package_name, " " * 8, package_version)
+
+composer_file = os.path.join (current_path, "composer.json")
+replace_in_file (filename=composer_file, text="{{dependencies}}", replacement_text=package_json.strip ().rstrip(","))
+
 # Install composer dependencies
-step (3, "Installing composer dependencies")
+step ("Installing composer dependencies")
 subprocess.check_output(["composer", "install"])
 
 # Install NPM dependencies
-step (4, "Installing NPM dependencies")
+step ("Installing NPM dependencies")
 subprocess.check_output(["npm", "install"])
 
 # Done
-step (5, "You're all set!\nPlease verify the integrity of the created system before proceeding.\nRun 'npm run watch' from here.", end="")
+step ("You're all set!\nPlease verify the integrity of the created system before proceeding.\nRun 'npm run watch' from here.", end="")
 
 # Self-destruct
 os.remove (sys.argv [0])

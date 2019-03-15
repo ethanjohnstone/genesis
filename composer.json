@@ -9,12 +9,8 @@
     ],
     "require": {
         "silverstripe/recipe-cms": "^4.2",
-        "symbiote/silverstripe-gridfieldextensions": "^3.2",
-        "wilr/silverstripe-googlesitemaps": "^2.1",
-        "bummzack/sortablefile": "^2.1",
-        "jonom/focuspoint": "^3.0",
-        "undefinedoffset/sortablegridfield": "^2.0",
-        "silverstripe/redirectedurls": "^2.0"
+        "silverstripe/redirectedurls": "^2.0",
+        {{dependencies}}
     },
     "extra": {
         "project-files-installed": [
