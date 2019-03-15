@@ -110,7 +110,7 @@ for package, value in dependency_results.items ():
     if value:
         package_data = package.split("#")
         package_name, package_version = package_data[0], package_data[1]
-        package_json += '"{}": "{}"{}\n'.format (package_name, " " * 8, package_version)
+        package_json += '"{}": "{}"\n{}'.format (package_name, package_version, " " * 8)
 
 composer_file = os.path.join (current_path, "composer.json")
 replace_in_file (filename=composer_file, text="{{dependencies}}", replacement_text=package_json.strip ().rstrip(","))
