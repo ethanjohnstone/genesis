@@ -80,6 +80,7 @@ files = get_files (exclude=[
 # Grab all necessary data
 params = query_user_data(data={
     "name": "Name of this project (lowercase & dashed)",
+    "description": "Description of this project",
     "namespace": "PHP project namespace",
     "author_name": "Name of the author",
     "author_email": "EMail address of the author",
@@ -106,8 +107,9 @@ dependency_results = question_user(data={
     "wilr/silverstripe-googlesitemaps#^2.1": "Google Sitemaps"
 })
 
+# Update composer.json
 composer_file = os.path.join (current_path, "composer.json")
-file_handle = open(composer_file, "rw")
+file_handle = open(composer_file, "r+")
 package_json = json.loads (file_handle.read())
 for package, value in dependency_results.items ():
     if value:
@@ -116,7 +118,7 @@ for package, value in dependency_results.items ():
         package_json ["require"][package_name] = package_version
 
 file_handle.seek (0)
-file_handle.write (json.dumps (package_json, sort_keys=True, indent=4, separators=(',', ': ')))
+file_handle.write (json.dumps (package_json, sort_keys=False, indent=4, separators=(',', ': ')))
 file_handle.close ()
 
 # Install composer dependencies
