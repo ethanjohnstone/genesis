@@ -9,8 +9,7 @@
     ],
     "require": {
         "silverstripe/recipe-cms": "^4.2",
-        "silverstripe/redirectedurls": "^2.0",
-        {{dependencies}}
+        "silverstripe/redirectedurls": "^2.0"
     },
     "extra": {
         "project-files-installed": [

@@ -5,6 +5,7 @@ import os
 import glob
 import sys
 import subprocess
+import json
 from shutil import copyfile
 
 # Parse arguments
@@ -26,9 +27,9 @@ def question_user (data = {}):
     resetColor = "\033[39m"
 
     for key, value in data.items ():
-        print ("> {}{}: {}(y/n){}".format (cyanColor, value, grayColor, resetColor), end=" ")
+        print ("> {}{}: {}(Y/n){}".format (cyanColor, value, grayColor, resetColor), end=" ")
         user_input = input ()
-        data [key] = user_input == "y"
+        data [key] = user_input.lower () != "n"
 
     return data
 
@@ -105,23 +106,29 @@ dependency_results = question_user(data={
     "wilr/silverstripe-googlesitemaps#^2.1": "Google Sitemaps"
 })
 
-package_json = ""
-for package, value in dependency_results.items ():
-    if value:
-        package_data = package.split("#")
-        package_name, package_version = package_data[0], package_data[1]
-        package_json += '"{}": "{}",\n{}'.format (package_name, package_version, " " * 8)
-
 composer_file = os.path.join (current_path, "composer.json")
-replace_in_file (filename=composer_file, text="{{dependencies}}", replacement_text=package_json.strip ().rstrip(","))
+open(composer_file, "rw") as file_handle:  
+    package_json = json.loads (file_handle.read())
+    for package, value in dependency_results.items ():
+        if value:
+            package_data = package.split("#")
+            package_name, package_version = package_data[0], package_data[1]
+            package_json ["require"][package_name] = package_version
+
+    file_handle.seek (0)
+    file_handle.write (json.dumps (package_json, sort_keys=True, indent=4, separators=(',', ': ')))
+    file_handle.close ()
 
 # Install composer dependencies
 step ("Installing composer dependencies")
+subprocess.check_output(["rm",  "-rf", "./vendor/"])
 subprocess.check_output(["composer", "install"])
 
 # Install NPM dependencies
 step ("Installing NPM dependencies")
+subprocess.check_output(["rm",  "-rf", "./app/node_modules/"])
 subprocess.check_output(["npm", "install"])
+subprocess.check_output(["npm", "run", "dev"])
 
 # Done
 step ("You're all set!\nPlease verify the integrity of the created system before proceeding.\nRun 'npm run watch' from here.", end="")
