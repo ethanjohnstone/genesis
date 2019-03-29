@@ -107,17 +107,17 @@ dependency_results = question_user(data={
 })
 
 composer_file = os.path.join (current_path, "composer.json")
-open(composer_file, "rw") as file_handle:  
-    package_json = json.loads (file_handle.read())
-    for package, value in dependency_results.items ():
-        if value:
-            package_data = package.split("#")
-            package_name, package_version = package_data[0], package_data[1]
-            package_json ["require"][package_name] = package_version
+file_handle = open(composer_file, "rw")
+package_json = json.loads (file_handle.read())
+for package, value in dependency_results.items ():
+    if value:
+        package_data = package.split("#")
+        package_name, package_version = package_data[0], package_data[1]
+        package_json ["require"][package_name] = package_version
 
-    file_handle.seek (0)
-    file_handle.write (json.dumps (package_json, sort_keys=True, indent=4, separators=(',', ': ')))
-    file_handle.close ()
+file_handle.seek (0)
+file_handle.write (json.dumps (package_json, sort_keys=True, indent=4, separators=(',', ': ')))
+file_handle.close ()
 
 # Install composer dependencies
 step ("Installing composer dependencies")
