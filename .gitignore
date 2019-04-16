@@ -4,7 +4,6 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-
 # Ignore package folders
 node_modules/
 resources/
@@ -19,6 +18,7 @@ assets
 # Ignore editor-related files
 .idea
 .eclipse
+.vscode
 
 # Ignore distribution folders
 dist/
