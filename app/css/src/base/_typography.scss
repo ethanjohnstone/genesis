@@ -18,40 +18,66 @@ h6 {
   margin-bottom: 10px;
 }
 
+// Responsive font presets
+%h1,
+.h1 {
+    font: $font-regular 22px/28px $font-family;
+    @include media($breakpoint-medium) { font: $font-regular 30px/38px $font-family; }
+    @include media($breakpoint-large) { font: $font-regular 36px/48px $font-family; }
+}
+
+%h2,
+.h2 {
+    font: $font-regular 22px/28px $font-family;
+    @include media($breakpoint-medium) { font: $font-regular 28px/36px $font-family; }
+    @include media($breakpoint-large) { font: $font-regular 36px/44px $font-family; }
+}
+
+%h3,
+.h3 {
+    font: $font-regular 16px/24px $font-family;
+    @include media($breakpoint-medium) { font: $font-regular 20px/30px $font-family; }
+    @include media($breakpoint-large) { font: $font-regular 20px/30px $font-family; }
+}
+
+%p1,
+.p1 {
+    font: $font-light 16px/24px $font-family;
+    @include media($breakpoint-medium) { font: $font-light 18px/28px $font-family; }
+    @include media($breakpoint-large) { font: $font-light 18px/28px $font-family; }
+}
+
+%p2,
+.p2 {
+    font: $font-regular 15px/23px $font-family;
+    @include media($breakpoint-medium) { font: $font-regular 16px/24px $font-family; }
+    @include media($breakpoint-large) { font: $font-regular 16px/24px $font-family; }
+}
+
+%p3,
+.p3 {
+    font: $font-regular 13px/16px $font-family;
+    @include media($breakpoint-medium) { font: $font-regular 13px/16px $font-family; }
+    @include media($breakpoint-large) { font: $font-regular 14px/18px $font-family; }
+}
+
+ %item,
+.item {
+    font: $font-regular 15px/15px $font-family;
+}
+
 // Silverstripe CMS classes
-.text-left {
-  text-align: left;
-}
-.text-center {
-  text-align: center;
-}
-.text-right {
-  text-align: right;
-}
 
-.text-justify {
-  text-align: justify;
-}
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
 
-img.left {
-  float: left;
-  margin: 0 20px 20px 0;
-}
+img.left { float: left; margin: 0 20px 20px 0; }
+img.right { float: right; margin: 0 0 20px 20px; }
 
-img.right {
-  float: right;
-  margin: 0 0 20px 20px;
-}
-
-img.leftAlone {
-  display: block;
-  margin: 0 20px 20px 0;
-}
-img.rightAlone {
-  display: block;
-  margin: 0 20px 20px 0;
-}
-
+img.leftAlone { display: block; margin: 0 20px 20px 0; }
+img.rightAlone { display: block; margin: 0 20px 20px 0; }
 img.center {
   display: block;
   margin-left: auto;
