@@ -6,8 +6,8 @@ ehthumbs.db
 Thumbs.db
 # Ignore package folders
 node_modules/
-resources/
-vendor/
+/resources/
+/vendor/
 
 # Ignore assets
 assets
