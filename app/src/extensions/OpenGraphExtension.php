@@ -1,11 +1,12 @@
 <?php
 
 namespace {{namespace}};
-use SilverStripe\ORM\DataExtension;
-use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\DropdownField;
-use SilverStripe\Forms\UploadField;
 use SilverStripe\Assets\Image;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\UploadField;
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\Forms\DropdownField;
 
 class OpenGraphExtension extends DataExtension {
     // OpenGraph fields
@@ -23,12 +24,10 @@ class OpenGraphExtension extends DataExtension {
 
     // Relation ownership
     private static $owns = [
-        "Image"
+        "OpenGraphImage"
     ];
 
-    public function getCMSFields () {
-        $fields = parent::getCMSFields ();
-
+    public function updateCMSFields (FieldList $field) {
         $fields -> addFieldsToTab ("Root.OpenGraph", [
             DropdownField::create ("OpenGraphEnabled", "Enabled", [
                 true => "Yes",

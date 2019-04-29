@@ -12,9 +12,6 @@ Silverstripe\SiteConfig\SiteConfig:
 SilverStripe\Assets\File:
   allowed_extensions: [svg, js]
 
-SilverStripe\Assets\Image:
-  allowed_extensions: [svg]
-
 SilverStripe\Core\Injector\Injector:
   SilverStripe\View\Requirements_Backend:
     properties:
@@ -22,3 +19,7 @@ SilverStripe\Core\Injector\Injector:
 
 SilverStripe\i18n\i18n:
   default_locale: 'en_US'
+
+Page:
+  extensions:
+    - {{namespace}}\OpenGraphExtension
