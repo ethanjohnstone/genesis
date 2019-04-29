@@ -6,6 +6,7 @@ import glob
 import sys
 import subprocess
 import json
+import shutil
 from shutil import copyfile
 
 # Parse arguments
@@ -131,6 +132,10 @@ step ("Installing NPM dependencies")
 subprocess.check_output(["rm",  "-rf", "./app/node_modules/"])
 subprocess.check_output(["npm", "install"])
 subprocess.check_output(["npm", "run", "dev"])
+
+# Remove .git folder
+step ("Installing NPM dependencies")
+shutil.rmtree (".git")
 
 # Done
 step ("You're all set!\nPlease verify the integrity of the created system before proceeding.\nRun 'npm run watch' from here.", end="")
