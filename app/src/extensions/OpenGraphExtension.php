@@ -1,6 +1,5 @@
 <?php
 
-namespace {{namespace}};
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;

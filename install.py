@@ -82,7 +82,6 @@ files = get_files (exclude=[
 params = query_user_data(data={
     "name": "Name of this project (lowercase & dashed)",
     "description": "Description of this project",
-    "namespace": "PHP project namespace",
     "author_name": "Name of the author",
     "author_email": "EMail address of the author",
     "db_host": "Database host",

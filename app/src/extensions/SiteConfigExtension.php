@@ -1,7 +1,5 @@
 <?php
 
-namespace {{namespace}};
-
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
