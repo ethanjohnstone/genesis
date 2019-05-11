@@ -4,7 +4,7 @@ namespace {{namespace}};
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\UploadField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\DropdownField;
 
@@ -27,7 +27,7 @@ class OpenGraphExtension extends DataExtension {
         "OpenGraphImage"
     ];
 
-    public function updateCMSFields (FieldList $field) {
+    public function updateCMSFields (FieldList $fields) {
         $fields -> addFieldsToTab ("Root.OpenGraph", [
             DropdownField::create ("OpenGraphEnabled", "Enabled", [
                 true => "Yes",
