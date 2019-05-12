@@ -136,6 +136,13 @@ subprocess.check_output(["npm", "run", "dev"])
 step ("Clearing git repository")
 shutil.rmtree (".git")
 
+# Clear README.md
+step ("Updating README file")
+readme_handle = open ("README.md", "w")
+readme_handle.seek (0)
+readme_handle.write ("# " + params ["name"])
+readme_handle.close ()
+
 # Done
 step ("You're all set!\nPlease verify the integrity of the created system before proceeding.\nRun 'npm run watch' from here.", end="")
 
