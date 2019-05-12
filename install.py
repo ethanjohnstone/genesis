@@ -133,7 +133,7 @@ subprocess.check_output(["npm", "install"])
 subprocess.check_output(["npm", "run", "dev"])
 
 # Remove .git folder
-step ("Installing NPM dependencies")
+step ("Clearing git repository")
 shutil.rmtree (".git")
 
 # Done
