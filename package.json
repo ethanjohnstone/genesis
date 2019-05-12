@@ -15,7 +15,7 @@
     "browser-sync": "^2.24.5",
     "browser-sync-webpack-plugin": "2.0.1",
     "css-mqpacker": "^5.0.1",
-    "hamburgers": "^0.9.1",
+    "hamburgers": "^0.9.3",
     "laravel-mix": "^2.1.11",
     "normalize-scss": "^6.0.0",
     "postcss-flexbugs-fixes": "^2.1.0"
