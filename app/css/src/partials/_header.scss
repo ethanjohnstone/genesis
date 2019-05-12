@@ -34,3 +34,11 @@
         text-decoration: none;
     }
 }
+
+.header__hamburger {
+    margin-left: 2rem;
+    
+    @include media($breakpoint-large) {
+        display: none;
+    }
+}
