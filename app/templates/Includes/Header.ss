@@ -7,7 +7,7 @@
             </li>
         <% end_loop %>
     </ul>
-    <button class="header__hamburger hamburger hamburger--collapse is-active" type="button">
+    <button class="header__hamburger hamburger hamburger--3dxy" type="button">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
