@@ -5,7 +5,10 @@ let localProxy = '{{name}}.test';
 
 mix
     // Combines and transpiles JavaScript
-    .babel(['app/javascript/src/app.js'], 'app/javascript/dist/app.js')
+    .babel([
+        'app/javascript/src/app.js',
+        'app/javascript/src/hamburger.js',
+    ], 'app/javascript/dist/app.js')
 
     // Transpiles SCSS
     .sass('app/css/src/app.scss', 'app/css/dist/')
@@ -21,12 +24,12 @@ mix
     })
 
     // Enable hot reloading
-    .browserSync({
-        proxy: localProxy,
-        injectChanges: true,
-        files: ['app/css/dist/app.css'],
-        notify: false
-    });
+    // .browserSync({
+    //     proxy: localProxy,
+    //     injectChanges: true,
+    //     files: ['app/css/dist/app.css'],
+    //     notify: false
+    // });
 
 /*
     Full Laravel Mix API:
