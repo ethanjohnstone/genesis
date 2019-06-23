@@ -6,4 +6,7 @@ use SilverStripe\Forms\HTMLEditor\TinyMCEConfig;
 // Custom editor styles
 TinyMCEConfig::get('cms')
     ->addButtonsToLine(1, 'styleselect')
-    ->setOption('importcss_append', true);
+    ->setOptions([
+        'importcss_append' => true,
+        'style_formats' => []
+    ]);
