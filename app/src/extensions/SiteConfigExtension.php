@@ -7,7 +7,7 @@ use SilverStripe\Forms\TextField;
 class SiteConfigExtension extends DataExtension
 {
     private static $db = [
-        "GoogleAnalyticsCode" => "Varchar(16)",
+        "GoogleTagManagerCode" => "Varchar(16)",
         "ContactPhoneNumber" => "Varchar(255)",
         "ContactFormEmail" => "Varchar(255)",
         "Copyright" => "Text"
@@ -25,8 +25,8 @@ class SiteConfigExtension extends DataExtension
 
         // Add fields
         $fields->addFieldsToTab("Root.Main", [
-            TextField::create("GoogleAnalyticsCode", "Google Analytics account")
-                ->setDescription("Account number to be used all across the site (in the format <strong>UA-XXXXX-X</strong>)"),
+            TextField::create("GoogleTagManagerCode", "Google Tag Manager account")
+                ->setDescription("Account number to be used all across the site (in the format <strong>GTM-XXXXXX</strong>)"),
             TextField::create("ContactPhoneNumber", "Phone Number")
                 ->setDescription("This is how the phone number will be displayed throughout the website."),
             TextField::create("ContactFormEmail", "Contact Email")
