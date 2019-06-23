@@ -1,3 +1,7 @@
+<% if $SiteConfig.MaintenanceActive && not $IsAdmin %>
+    <% include Maintenance %>
+<% else %>
+
 <!DOCTYPE html>
 <head>
     <%-- Generates base element that makes all links relative to it --%>
@@ -57,3 +61,4 @@
 </body>
 </html>
 
+<% end_if %>
