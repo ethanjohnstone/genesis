@@ -2,6 +2,7 @@
 <head>
     <%-- Generates base element that makes all links relative to it --%>
     <% base_tag %>
+    <title>$Title</title>
     
     <%-- Set character encoding for the document --%>
     <meta charset="utf-8">
