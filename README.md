@@ -13,3 +13,5 @@ $ cd genesis/
 $ python3 ./install.py
 $ npm run watch
 ```
+
+When going live make sure to remove the robots.txt file and remove the robots meta tag
