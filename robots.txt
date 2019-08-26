@@ -1,7 +1,5 @@
-# Do not allow Robots to crawl our staging websites
 User-agent: *
-Disallow: /
-
-# Allow: /
+Disallow: /assets
+Disallow: /admin
 
 Sitemap: https://websitepath.co.nz/sitemap.xml
