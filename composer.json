@@ -1,31 +1,32 @@
 {
-    "name": "{{name}}",
-    "description": "{{description}}",
-    "type": "project",
-    "authors": [
-        {
-            "name": "{{author_name}}",
-            "email": "{{author_email}}"
-        }
-    ],
-    "require": {
-        "silverstripe/recipe-cms": "^4.2",
-        "silverstripe/redirectedurls": "^2.0"
-    },
-    "extra": {
-        "project-files-installed": [
-            "app/.htaccess",
-            "app/_config.php",
-            "app/_config/app.yml",
-            "app/src/Page.php",
-            "app/src/PageController.php"
-        ],
-        "public-files-installed": [
-            ".htaccess",
-            "index.php",
-            "install-frameworkmissing.html",
-            "install.php",
-            "web.config"
-        ]
+  "name": "{{name}}",
+  "description": "{{description}}",
+  "type": "project",
+  "authors": [
+    {
+      "name": "{{author_name}}",
+      "email": "{{author_email}}"
     }
+  ],
+  "require": {
+    "silverstripe/recipe-cms": "^4.4",
+    "silverstripe/redirectedurls": "^2.0",
+    "silverstripe/googlesitemaps": "2.1.5"
+  },
+  "extra": {
+    "project-files-installed": [
+      "app/.htaccess",
+      "app/_config.php",
+      "app/_config/app.yml",
+      "app/src/Page.php",
+      "app/src/PageController.php"
+    ],
+    "public-files-installed": [
+      ".htaccess",
+      "index.php",
+      "install-frameworkmissing.html",
+      "install.php",
+      "web.config"
+    ]
+  }
 }

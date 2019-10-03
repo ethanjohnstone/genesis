@@ -7,7 +7,7 @@ SilverStripe\Core\Manifest\ModuleManifest:
 
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
-    - SiteConfigExtension
+    - App\Extensions\SiteConfigExtension
 
 SilverStripe\Assets\File:
   allowed_extensions: [svg, js]
@@ -22,4 +22,4 @@ SilverStripe\i18n\i18n:
 
 Page:
   extensions:
-    - OpenGraphExtension
+    - App\Extensions\OpenGraphExtension
