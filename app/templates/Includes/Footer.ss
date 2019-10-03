@@ -4,10 +4,10 @@
     </div>
     <div class="footer__notes">
         <div class="footer__note footer__copyright">
-            $SiteConfig.Copyright
+            &copy; {$Now.Year} {$SiteConfig.Title}
         </div>
         <div class="footer__note footer__creator">
-            Website by <a href="https://blacksheepcreative.co.nz">Black Sheep Creative</a>
+            Website by <a href="https://blacksheepcreative.co.nz" target="_blank">Black Sheep Creative</a>
         </div>
     </div>
 </footer>

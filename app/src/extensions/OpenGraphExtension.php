@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Extensions;
+
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
