@@ -1,5 +1,4 @@
 .footer {
-    @include padding($y-spacing: 3rem);
     border-top: 1px solid $color-medium-gray;
     display: flex;
     justify-content: space-between;
