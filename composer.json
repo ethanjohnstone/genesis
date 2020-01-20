@@ -1,32 +1,37 @@
 {
-  "name": "{{name}}",
-  "description": "{{description}}",
-  "type": "project",
-  "authors": [
-    {
-      "name": "{{author_name}}",
-      "email": "{{author_email}}"
-    }
-  ],
-  "require": {
-    "silverstripe/recipe-cms": "^4.5",
-    "silverstripe/redirectedurls": "^2.0",
-    "silverstripe/googlesitemaps": "2.1.5"
-  },
-  "extra": {
-    "project-files-installed": [
-      "app/.htaccess",
-      "app/_config.php",
-      "app/_config/app.yml",
-      "app/src/Page.php",
-      "app/src/PageController.php"
+    "name": "ethanjohnstone/gensis",
+    "description": "Good ol starter theme for SS4 jazz",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Ethan Johnstone",
+            "email": "ethan@baa.co.nz"
+        }
     ],
-    "public-files-installed": [
-      ".htaccess",
-      "index.php",
-      "install-frameworkmissing.html",
-      "install.php",
-      "web.config"
-    ]
-  }
+    "require": {
+        "silverstripe/recipe-cms": "^4.5",
+        "silverstripe/redirectedurls": "^2.0",
+        "silverstripe/googlesitemaps": "2.1.5",
+        "symbiote/silverstripe-gridfieldextensions": "^3.2",
+        "jonom/focuspoint": "^3.1",
+        "undefinedoffset/silverstripe-nocaptcha": "^2.0",
+        "silverstripe/login-forms": "^4.1"
+    },
+    "extra": {
+        "project-files-installed": [
+            "app/.htaccess",
+            "app/_config.php",
+            "app/_config/app.yml",
+            "app/_config/mysite.yml",
+            "app/src/Page.php",
+            "app/src/PageController.php"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "web.config"
+        ]
+    }
 }

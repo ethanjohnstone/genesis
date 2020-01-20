@@ -42,8 +42,6 @@ label {
 input,
 select,
 textarea {
-    @extend %u-font--tertiary;
-
     display: block;
     font-size: 18px;
     line-height: 22px;
