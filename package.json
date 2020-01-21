@@ -12,13 +12,16 @@
     "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.5",
-    "browser-sync-webpack-plugin": "2.0.1",
-    "css-mqpacker": "^5.0.1",
-    "hamburgers": "^0.9.3",
-    "laravel-mix": "^2.1.11",
-    "normalize-scss": "^6.0.0",
-    "postcss-flexbugs-fixes": "^2.1.0"
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "hamburgers": "^1.1.3",
+    "laravel-mix": "^5.0.1",
+    "mqpacker": "^7.0.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {}
 }
