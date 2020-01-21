@@ -42,8 +42,6 @@ label {
 input,
 select,
 textarea {
-    @extend %u-font--tertiary;
-
     display: block;
     font-size: 18px;
     line-height: 22px;
@@ -125,7 +123,6 @@ select {
     background-position: center right 20px;
     background-repeat: no-repeat;
     padding-right: 40px;
-    background-image: url("../../images/icons/arrowDown.svg");
 }
 
 [type="submit"]{
