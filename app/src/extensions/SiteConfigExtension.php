@@ -2,6 +2,7 @@
 
 namespace App\Extensions;
 
+use SilverStripe\Assets\Image;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
@@ -18,6 +19,14 @@ class SiteConfigExtension extends DataExtension
     private static $defaults = [
         "ContactPhoneNumber" => "027 123 456",
         "ContactFormEmail" => "support@baa.co.nz"
+    ];
+
+    private static $has_one = [
+        "OpenGraphImage" => Image::class
+    ];
+
+    private static $owns = [
+        "OpenGraphImage"
     ];
 
     public function updateCMSFields(FieldList $fields)
