@@ -11,4 +11,9 @@ class HomePage extends Page
     private static $singular_name = "Homepage";
     private static $plural_name = "Homepages";
     private static $controller_name = HomePageController::class;
+
+    public function isHome()
+    {
+        return true;
+    }
 }

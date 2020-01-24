@@ -2,7 +2,9 @@
 <head>
     <%-- Generates base element that makes all links relative to it --%>
     <% base_tag %>
-    <title>$Title</title>
+    <title>
+        <% if $SeoTitle %>{$SeoTitle}&nbsp;|<% else_if not $isHome %>{$Title}&nbsp;|<% end_if %>&nbsp;{$SiteConfig.Title}
+    </title>
 
     <%-- Set character encoding for the document --%>
     <meta charset="utf-8">

@@ -22,3 +22,5 @@ assets
 
 # Ignore distribution folders
 dist/
+manifest.js
+vendor.js
