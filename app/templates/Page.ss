@@ -34,7 +34,7 @@
     <% include MetaIcons %>
 
     <%-- Open Graph --%>
-    <% include OpenGraph Data=$Top %>
+    <% include OpenGraph %>
 
     <!-- Google Tag Manager -->
     <script>

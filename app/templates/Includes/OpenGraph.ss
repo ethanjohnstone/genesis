@@ -1,20 +1,15 @@
-<% if $Data.OpenGraphEnabled %>
-    <meta property="og:type" content="$Data.OpenGraphType">
-    <meta property="og:site_name" content="$SiteConfig.Title">
+<% with $OpenGraphInfo %>
+    <meta property="og:type" content="$Type">
+    <meta property="og:site_name" content="$SiteName">
     <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="$AbsoluteLink">
-    <meta property="og:title" content="<% if $Data.OpenGraphTitle %>$Data.OpenGraphTitle<% else %>$Title<% end_if %>">
-    <% if $Data.OpenGraphImage %>
-        <meta property="og:image" content="$Data.OpenGraphImage.URL">
-        <meta property="og:image:width" content="$Data.OpenGraphImage.Width">
-        <meta property="og:image:height" content="$Data.OpenGraphImage.Height">
-    <% end_if %>
-    <% if $Data.OpenGraphDescription %>
-        <meta property="og:description" content="$Data.OpenGraphDescription">
-    <% end_if %>
-<% else %>
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="$AbsoluteLink">
-    <meta property="og:site_name" content="$SiteConfig.Title">
+    <meta property="og:url" content="$Url">
     <meta property="og:title" content="$Title">
-<% end_if %>
+    <% if $Description %>
+        <meta property="og:description" content="$Description">
+    <% end_if %>
+    <% if $Image %>
+        <meta property="og:image" content="$Image.Url">
+        <meta property="og:image:width" content="$Image.Width">
+        <meta property="og:image:height" content="$Image.Height">
+    <% end_if %>
+<% end_with %>
