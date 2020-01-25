@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content u-container u-spacing--y">
     $Content
     <% if $Form %>
         $Form
