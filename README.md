@@ -6,6 +6,7 @@
 3. run `npm install` or `yarn`
 4. run `composer install`
 5. Verify the project integrity and then run `npm run watch` (or `yarn watch`)
-6. You're all set!
+6. Update the origin remote to a repository for your project
+7. You're all set!
 
 When going live make sure to remove the robots.txt file and remove the robots meta tag
