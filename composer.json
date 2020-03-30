@@ -10,12 +10,11 @@
     ],
     "require": {
         "silverstripe/recipe-cms": "^4.5",
-        "silverstripe/redirectedurls": "^2.0",
+        "silverstripe/redirectedurls": "^2.1",
         "silverstripe/googlesitemaps": "2.1.5",
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
         "jonom/focuspoint": "^3.1",
-        "undefinedoffset/silverstripe-nocaptcha": "^2.0",
-        "silverstripe/login-forms": "^4.1"
+        "undefinedoffset/silverstripe-nocaptcha": "^2.0"
     },
     "extra": {
         "project-files-installed": [
