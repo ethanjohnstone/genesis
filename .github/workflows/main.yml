@@ -22,7 +22,7 @@ jobs:
     - name: Build plugins
       run: composer update
     - name: Build assets
-      run: npm install && npm run build
+      run: yarn && npm production
     - name: Upload PHP
       uses: actions/upload-artifact@v1
       with:
