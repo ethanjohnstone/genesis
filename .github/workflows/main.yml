@@ -28,11 +28,11 @@ jobs:
       with:
         name: php-build
         path: vendor
-    - name: Upload assets
-      uses: actions/upload-artifact@v1
-      with:
-        name: js-build
-        path: assets
+#    - name: Upload assets
+#      uses: actions/upload-artifact@v1
+#      with:
+#        name: js-build
+#        path: assets
     - if: success()
       name: Send build success message
       uses: rtCamp/action-slack-notify@master
