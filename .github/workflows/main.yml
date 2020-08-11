@@ -55,10 +55,9 @@ jobs:
     - name: Deploy website
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ${{ secrets.FTP_HOST }}
+        ftp-server: ${{ secrets.FTP_HOST }}/httpdocs
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        git-ftp-args: --remote-root=httpdocs
         args: --only-newer --ignore-time --verbose
     - if: success()
       name: Send deployment success message
