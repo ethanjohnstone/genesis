@@ -60,18 +60,18 @@ jobs:
       with:
         name: php-build
         path: vendor
-    - name: Download assets
-      uses: actions/download-artifact@v1
-      with:
-        name: js-build
-        path: assets
+#    - name: Download assets
+#      uses: actions/download-artifact@v1
+#      with:
+#        name: js-build
+#        path: assets
     - name: Deploy website
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       env:
         FTP_SERVER: ${{ secrets.FTP_HOST }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        REMOTE_DIR: public_html
+        REMOTE_DIR: httpdocs
         ARGS: --only-newer --ignore-time --verbose
     - if: success()
       name: Send deployment success message
