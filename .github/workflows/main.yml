@@ -25,11 +25,6 @@ jobs:
       with:
         name: php-build
         path: vendor
-#    - name: Upload assets
-#      uses: actions/upload-artifact@v1
-#      with:
-#        name: js-build
-#        path: assets
     - if: success()
       name: Send build success message
       uses: rtCamp/action-slack-notify@master
@@ -57,18 +52,13 @@ jobs:
       with:
         name: php-build
         path: vendor
-#    - name: Download assets
-#      uses: actions/download-artifact@v1
-#      with:
-#        name: js-build
-#        path: assets
     - name: Deploy website
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
         ftp-server: ${{ secrets.FTP_HOST }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        entryPoint: httpdocs
+        git-ftp-args: --remote-root=httpdocs
         args: --only-newer --ignore-time --verbose
     - if: success()
       name: Send deployment success message
