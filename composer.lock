@@ -488,16 +488,16 @@
         },
         {
             "name": "jonom/focuspoint",
-            "version": "3.1.1",
+            "version": "3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jonom/silverstripe-focuspoint.git",
-                "reference": "09ae334655b0156c91aab0ceb2f2de13a7063d4f"
+                "reference": "0b80b673706299e7e171fbfde7600bf1b1879432"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jonom/silverstripe-focuspoint/zipball/09ae334655b0156c91aab0ceb2f2de13a7063d4f",
-                "reference": "09ae334655b0156c91aab0ceb2f2de13a7063d4f",
+                "url": "https://api.github.com/repos/jonom/silverstripe-focuspoint/zipball/0b80b673706299e7e171fbfde7600bf1b1879432",
+                "reference": "0b80b673706299e7e171fbfde7600bf1b1879432",
                 "shasum": ""
             },
             "require": {
@@ -541,7 +541,17 @@
                 "image",
                 "silverstripe"
             ],
-            "time": "2019-07-01T22:51:15+00:00"
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/jmnz",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/jonom",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-06-12T19:10:48+00:00"
         },
         {
             "name": "league/csv",
