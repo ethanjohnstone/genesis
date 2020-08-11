@@ -68,8 +68,8 @@ jobs:
         ftp-server: ${{ secrets.FTP_HOST }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        REMOTE_DIR: httpdocs
-        ARGS: --only-newer --ignore-time --verbose
+        entryPoint: httpdocs
+        args: --only-newer --ignore-time --verbose
     - if: success()
       name: Send deployment success message
       uses: rtCamp/action-slack-notify@master
