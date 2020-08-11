@@ -68,9 +68,9 @@ jobs:
     - name: Deploy website
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       env:
-        FTP_SERVER: ${{ secrets.FTP_HOST }}
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        ftp-server: ${{ secrets.FTP_HOST }}
+        ftp-username: ${{ secrets.FTP_USERNAME }}
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
         REMOTE_DIR: httpdocs
         ARGS: --only-newer --ignore-time --verbose
     - if: success()
