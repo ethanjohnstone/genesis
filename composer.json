@@ -9,18 +9,19 @@
         }
     ],
     "require": {
-        "silverstripe/recipe-cms": "^4.5",
+        "silverstripe/recipe-cms": "^4.6",
         "silverstripe/redirectedurls": "^2.1",
-        "silverstripe/googlesitemaps": "2.1.6",
+        "silverstripe/googlesitemaps": "2.1.7",
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
         "jonom/focuspoint": "^3.1",
-        "undefinedoffset/silverstripe-nocaptcha": "^2.0"
+        "undefinedoffset/silverstripe-nocaptcha": "^2.1"
     },
     "extra": {
         "project-files-installed": [
             "app/.htaccess",
             "app/_config.php",
             "app/_config/app.yml",
+            "app/_config/mimevalidator.yml",
             "app/_config/mysite.yml",
             "app/src/Page.php",
             "app/src/PageController.php"
