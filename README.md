@@ -17,7 +17,7 @@ Included in this project is a maintenance folder containing a plain maintenance.
  
 Replace these things:
 - logo.svg in `maintenance/`
-- phone number, email, page title in maintenance.html`
+- phone number, email, page title in `maintenance.html`
 
 with appropriate stuff, and you're away laughing. You can make it even nicer by customising those colours a bit.
 
