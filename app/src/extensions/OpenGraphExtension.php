@@ -11,7 +11,8 @@ use SilverStripe\Forms\DropdownField;
 use SilverStripe\SiteConfig\SiteConfig;
 use SilverStripe\View\ArrayData;
 
-class OpenGraphExtension extends DataExtension {
+class OpenGraphExtension extends DataExtension
+{
     // OpenGraph fields
     private static $db = [
         "OpenGraphTitle" => "Text",
@@ -33,15 +34,16 @@ class OpenGraphExtension extends DataExtension {
         "OpenGraphImage"
     ];
 
-    public function updateCMSFields (FieldList $fields) {
-        $fields -> addFieldsToTab ("Root.OpenGraph", [
-            TextField::create ("OpenGraphTitle", "Title"),
-            TextField::create ("OpenGraphDescription", "Description"),
-            DropdownField::create ("OpenGraphType", "Type", [
+    public function updateCMSFields(FieldList $fields)
+    {
+        $fields->addFieldsToTab("Root.OpenGraph", [
+            TextField::create("OpenGraphTitle", "Title"),
+            TextField::create("OpenGraphDescription", "Description"),
+            DropdownField::create("OpenGraphType", "Type", [
                 "website" => "Website",
                 "article" => "Article"
             ]),
-            UploadField::create ("OpenGraphImage", "Image")
+            UploadField::create("OpenGraphImage", "Image")
         ]);
 
         return $fields;
@@ -51,7 +53,7 @@ class OpenGraphExtension extends DataExtension {
     {
         $config = SiteConfig::current_site_config();
         $data = [
-            "Type"  => !empty($this->owner->OpenGraphType) ? $this->owner->OpenGraphType : 'website',
+            "Type" => !empty($this->owner->OpenGraphType) ? $this->owner->OpenGraphType : !empty($config->OpenGraphType) ? $config->OpenGraphType : 'website',
             "Title" => !empty($this->owner->OpenGraphTitle) ? $this->owner->OpenGraphTitle : $this->owner->Title,
             "SiteName" => $config->Title,
             "Url" => $this->owner->AbsoluteLink(),
