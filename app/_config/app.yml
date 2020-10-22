@@ -16,6 +16,25 @@ SilverStripe\Core\Injector\Injector:
   SilverStripe\View\Requirements_Backend:
     properties:
       forceJSToBottom: true
+  UndefinedOffset\NoCaptcha\Forms\NocaptchaField:
+    properties:
+      SiteKey: '`SS_NOCAPTCHA_SITE_KEY`'
+      SecretKey: '`SS_NOCAPTCHA_SECRET_KEY`'
+
+SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
+  default_spam_protector: UndefinedOffset\NoCaptcha\Forms\NocaptchaProtector
+
+UndefinedOffset\NoCaptcha\Forms\NocaptchaField:
+  recaptcha_version: 2 # 2 or 3
+  minimum_score: 0.2 # minimum spam score to achieve. Any less is blocked
+  verify_ssl: true #Allows you to disable php-curl's SSL peer verification by setting this to false (optional, defaults to true)
+  default_theme: "light" #Default theme color (optional, light or dark, defaults to light)
+  default_type: "image" #Default captcha type (optional, image or audio, defaults to image)
+  default_size: "invisible" #Default size (optional, normal, compact or invisible, defaults to normal)
+  default_badge: "bottomright" #Default badge position (bottomright, bottomleft or inline, defaults to bottomright)
+  proxy_server: "" #Your proxy server address (optional)
+  proxy_port: "" #Your proxy server address port (optional)
+  proxy_auth: "" #Your proxy server authentication information (optional)
 
 SilverStripe\i18n\i18n:
   default_locale: 'en_US'
