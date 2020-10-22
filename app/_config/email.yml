@@ -5,7 +5,7 @@ After:
 ---
 
 SilverStripe\Control\Email\Email:
-  admin_email: username
+  admin_email: '`APP_ADMIN_EMAIL`'
 
 SilverStripe\Core\Injector\Injector:
   Swift_Transport:
@@ -14,8 +14,8 @@ SilverStripe\Core\Injector\Injector:
       Host: localhost
       Encryption: tls
     calls:
-      Username: [ setUsername, ['username'] ]
-      Password: [ setPassword, ['password'] ]
+      Username: [ setUsername, ['`APP_SMTP_USERNAME`'] ]
+      Password: [ setPassword, ['`APP_SMTP_PASSWORD`'] ]
 
 Email:
   bcc_all_emails_to: 'me@example.com'
