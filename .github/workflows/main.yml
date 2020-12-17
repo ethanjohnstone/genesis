@@ -1,0 +1,42 @@
+# .github/workflows/main.yml
+
+name: Production CI
+on:
+  push:
+    branches:
+    - workflows
+
+jobs:    
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout files and setup environment
+      uses: actions/checkout@v1
+    - name: Set up Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.15.3'
+    - name: Build plugins
+      run: composer update
+    - name: Build assets
+      run: yarn && yarn production
+    - name: Upload PHP
+      uses: actions/upload-artifact@v1
+      with:
+        name: php-build
+        path: vendor
+    - if: success()
+      name: Send build success message
+      uses: rtCamp/action-slack-notify@master
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: Git message
+        SLACK_MESSAGE: The build process succeeded
+    - if: failure()
+      name: Send build fail message
+      uses: rtCamp/action-slack-notify@master
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: Git message
+        SLACK_MESSAGE: The build process failed
+        SLACK_COLOR: '#BE2625'
