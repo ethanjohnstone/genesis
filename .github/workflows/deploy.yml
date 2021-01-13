@@ -1,6 +1,6 @@
 # .github/workflows/main.yml
 
-name: Production CI
+name: Deploy things
 on:
   workflow_dispatch:
     inputs:
