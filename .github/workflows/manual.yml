@@ -5,6 +5,9 @@ name: Manual workflow
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
+  push:
+    branches:
+    - workflows
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
@@ -14,10 +17,7 @@ on:
         # Default value if no value is explicitly provided
         default: 'World'
         # Input has to be provided for the workflow to run
-        required: true
-  push:
-    branches:
-    - workflows 
+        required: true  
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
