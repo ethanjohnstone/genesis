@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "silverstripe/recipe-cms": "^4.6",
+        "silverstripe/recipe-cms": "^4.7",
         "silverstripe/redirectedurls": "^2.1",
         "silverstripe/googlesitemaps": "2.1.7",
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
