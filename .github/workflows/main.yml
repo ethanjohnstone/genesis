@@ -10,7 +10,8 @@ name: Build things
 on:
   push:
     branches:
-    - master
+      - staging
+      - production
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
