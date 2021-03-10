@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Prepare for deployment
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
     - name: Download PHP
       uses: actions/download-artifact@v2
       with:
