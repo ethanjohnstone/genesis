@@ -38,7 +38,7 @@ jobs:
     - name: Build assets
       run: yarn && yarn production
     - name: Upload PHP
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2
       with:
         name: php-build
         path: vendor
@@ -64,14 +64,14 @@ jobs:
     - name: Prepare for deployment
       uses: actions/checkout@master
     - name: Download PHP
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v2
       with:
         name: php-build
         path: vendor
         
     - name: Deploy staging
       if: github.ref == 'refs/heads/staging'
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         ftp-server: ${{ secrets.FTP_HOST }}/httpdocs
         ftp-username: ${{ secrets.FTP_USERNAME }}
@@ -80,7 +80,7 @@ jobs:
         
     - name: Deploy production
       if: github.ref == 'refs/heads/production'
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         ftp-server: ${{ secrets.FTP_HOST }}/httpdocs
         ftp-username: ${{ secrets.FTP_USERNAME }}
