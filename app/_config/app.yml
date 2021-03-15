@@ -42,3 +42,7 @@ SilverStripe\i18n\i18n:
 Page:
   extensions:
     - App\Extensions\OpenGraphExtension
+
+App\Pages\ContentPage:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension

@@ -24,7 +24,6 @@ mix.babel([
         ],
         processCssUrls: false
     })
-    .extract()
     .browserSync({
         proxy: localProxy,
         injectChanges: true,
