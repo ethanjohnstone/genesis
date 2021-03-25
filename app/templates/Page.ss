@@ -4,7 +4,13 @@
     <%-- Generates base element that makes all links relative to it --%>
     <% base_tag %>
     <title>
-        <% if $SeoTitle %>$SeoTitle<% else_if not $isHome %>$Title<% end_if %> | $SiteConfig.Title
+        <% if $URLSegment = home %>
+            $SiteConfig.Title
+        <% else_if $SeoTitle %>
+            $SeoTitle | $SiteConfig.Title
+        <% else %>
+            $Title | $SiteConfig.Title
+        <% end_if %>
     </title>
 
     <%-- Set character encoding for the document --%>
@@ -48,9 +54,9 @@
 <body class="body">
     <% include Header %>
 
-    <div class="main" role="main">
+    <main class="main">
         $Layout
-    </div>
+    </main>
 
     <% include Footer %>
     <% require themedJavascript("javascript/dist/app") %>
