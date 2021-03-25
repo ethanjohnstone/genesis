@@ -1,9 +1,5 @@
-@import "variables";
-@import "../mixins/mixins";
+// Base: CSS resets, typography or grid systems go here
 
-@import "forms";
-@import "layout";
-@import "lists";
-@import "media";
-@import "tables";
+@import "reset";
 @import "typography";
+@import "layout";

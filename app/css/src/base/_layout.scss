@@ -1,58 +1,10 @@
-html {
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-    font-family: inherit;
-}
-
-html,
 body {
-    height: 100%;
-    font-family: $font-family;
-    color: $color-dark-gray;
-}
-
-body {
-    margin: 0;
-    overflow-x: hidden;
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-    .main {
-        flex: 1;
-    }
 }
 
-.u-container {
-    padding-left: 25px;
-    padding-right: 25px;
-
-    @include media($breakpoint-medium) {
-        padding-left: 40px;
-        padding-right: 40px;
-        max-width: 1280px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-.u-spacing--y {
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    @include media($breakpoint-medium) {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    @include media($breakpoint-large) {
-        padding-top: 55px;
-        padding-bottom: 65px;
-    }
+main {
+    padding: 3rem;
+    flex-grow: 1;
 }
