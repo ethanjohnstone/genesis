@@ -17,5 +17,5 @@ SilverStripe\Core\Injector\Injector:
       Username: [ setUsername, ['`APP_SMTP_USERNAME`'] ]
       Password: [ setPassword, ['`APP_SMTP_PASSWORD`'] ]
 
-Email:
-  bcc_all_emails_to: 'me@example.com'
+# Email:
+#   bcc_all_emails_to: 'me@example.com'
