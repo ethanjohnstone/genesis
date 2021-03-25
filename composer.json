@@ -22,7 +22,8 @@
         "silverstripe/googlesitemaps": "2.1.9",
 
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
-        "undefinedoffset/silverstripe-nocaptcha": "^2.1"
+        "undefinedoffset/silverstripe-nocaptcha": "^2.1",
+        "silverstripe/login-forms": "^4.3"
     },
     "extra": {
         "project-files-installed": [
