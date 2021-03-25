@@ -12,8 +12,6 @@ namespace {
             "SeoTitle" => "Text"
         ];
 
-        private static $has_one = [];
-
         public function getCMSFields()
         {
             $fields = parent::getCMSFields();
@@ -24,11 +22,6 @@ namespace {
             ], "MenuTitle");
 
             return $fields;
-        }
-
-        public function IsAdmin()
-        {
-            return Permission::check("ADMIN");
         }
     }
 }
