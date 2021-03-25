@@ -24,3 +24,6 @@ assets
 dist/
 manifest.js
 vendor.js
+
+# Laravel Mix
+mix-manifest.json
