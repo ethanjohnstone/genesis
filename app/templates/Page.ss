@@ -23,10 +23,6 @@
     <%-- Generates meta data, setting false stops it generating a title tag --%>
     $MetaTags(false)
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <%-- Require CSS --%>
     <% require themedCSS("css/dist/app") %>
 
