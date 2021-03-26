@@ -1,11 +1,3 @@
-// Mixins
-$default-feature: min-width; // Default @media feature for the media() mixin
-
-// Breakpoints
-$breakpoint-medium: 600px;
-$breakpoint-large: 1200px;
-$breakpoint-huge: 1800px;
-
 // Typography
 $font-family: (
   'Avenir',
@@ -13,9 +5,8 @@ $font-family: (
 );
 
 // Colors
+$color-white: #f4f4f4;
 $color-light-gray: #f7f7f7;
 $color-medium-gray: #eaeaea;
-$color-darkish-gray: #9b9b9b;
 $color-dark-gray: #58595b;
-$color-bright: #f4f4f4;
 $color-black: black;
