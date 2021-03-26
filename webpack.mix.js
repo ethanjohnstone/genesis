@@ -1,5 +1,10 @@
-let mix = require("laravel-mix");
-let localProxy = "genesis.test";
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable max-len */
+
+const mix = require('laravel-mix');
+const mqpacker = require('mqpacker');
+require('laravel-mix-eslint');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,23 +16,43 @@ let localProxy = "genesis.test";
  |
  */
 
+// Environment conditions
+const environment = process.env.NODE_ENV;
+
+// ESLint configuration
+const eslintRules = {
+  development: {
+    'no-console': 'off',
+  },
+  production: {},
+};
+
+// Main pipeline
 mix
-    .babel([
-        "app/javascript/src/app.js"
-    ], "app/javascript/dist/app.js")
-    .sass("app/css/src/app.scss", "app/css/dist/")
-    .sass("app/css/src/editor.scss", "app/css/dist/")
-    .options({
-        postCss: [
-            require("mqpacker")({ sort: true })    // Combines MediaQueries
-        ],
-        processCssUrls: false
-    })
-    .browserSync({
-        proxy: localProxy,
-        injectChanges: true,
-        files: ["app/css/dist/app.css"]
-    });
+  .webpackConfig({
+    target: 'web',
+  })
+
+  .eslint({
+    extensions: ['.js'],
+    overrideConfig: {
+      rules: eslintRules[environment] || {},
+    },
+  })
+
+  .js([
+    'app/javascript/src/main.js',
+  ], 'app/javascript/dist/main.js')
+
+  .sass('app/css/src/main.scss', 'app/css/dist/')
+  .sass('app/css/src/editor.scss', 'app/css/dist/')
+
+  .options({
+    postCss: [
+      mqpacker({ sort: true }), // Combines MediaQueries
+    ],
+    processCssUrls: false,
+  });
 
 // Full API
 // mix.js(src, output);

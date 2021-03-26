@@ -9,18 +9,29 @@
     "dev": "mix",
     "watch": "mix watch",
     "hot": "mix watch --hot",
-    "production": "mix --production"
+    "production": "mix --production",
+    "eslint": "eslint app/javascript/src"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "browser-sync-webpack-plugin": "^2.2.2",
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-vue": "^7.8.0",
+    "eslint-webpack-plugin": "^2.5.3",
     "laravel-mix": "^6",
+    "laravel-mix-eslint": "^0.2.0",
     "mqpacker": "^7.0.0",
     "resolve-url-loader": "^3.1.2",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1"
   },
   "dependencies": {
-    "minireset.css": "^0.0.7"
+    "minireset.css": "^0.0.7",
+    "react": "^17.0.2"
   }
 }

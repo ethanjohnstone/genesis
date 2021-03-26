@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <%-- Generates base element that makes all links relative to it --%>
     <% base_tag %>
@@ -30,7 +30,7 @@
     $MetaTags(false)
 
     <%-- Require CSS --%>
-    <% require themedCSS("css/dist/app") %>
+    <% require themedCSS("css/dist/main") %>
 
     <%-- Fav icons, etc --%>
     <% include MetaIcons %>
@@ -59,7 +59,7 @@
     </main>
 
     <% include Footer %>
-    <% require themedJavascript("javascript/dist/app") %>
+    <% require themedJavascript("javascript/dist/main.js") %>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript>
