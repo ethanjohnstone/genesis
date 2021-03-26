@@ -4,6 +4,7 @@
 const mix = require('laravel-mix');
 const mqpacker = require('mqpacker');
 require('laravel-mix-eslint');
+require('laravel-mix-stylelint');
 
 /*
  |--------------------------------------------------------------------------
@@ -43,6 +44,12 @@ mix
   .js([
     'app/javascript/src/main.js',
   ], 'app/javascript/dist/main.js')
+
+  .stylelint({
+    configFile: './.stylelintrc.json',
+    files: ['css/src/**/*.scss'],
+    context: 'app/',
+  })
 
   .sass('app/css/src/main.scss', 'app/css/dist/')
   .sass('app/css/src/editor.scss', 'app/css/dist/')

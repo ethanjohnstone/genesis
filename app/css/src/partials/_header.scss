@@ -1,23 +1,23 @@
 .header {
-    border-bottom: 1px solid $color-medium-gray;
-    background-color: $color-light-gray;
-    display: flex;
-    justify-content: flex-start;
-    padding: 2rem;
+  border-bottom: 1px solid $color-medium-gray;
+  background-color: $color-light-gray;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem;
 }
 
 .header__link {
-    &.header__link--active {
-        font-weight: bold;
-    }
+  &.header__link--active {
+    font-weight: bold;
+  }
 
-    &:not(:first-child) {
-        margin-left: 1rem;
-    }
+  &:not(:first-child) {
+    margin-left: 1rem;
+  }
 
-    a {
-        color: inherit;
-        text-decoration: none;
-        display: block;
-    }
+  a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+  }
 }
