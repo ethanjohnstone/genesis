@@ -20,10 +20,22 @@
         "silverstripe/recipe-cms": "^4.7",
         "silverstripe/redirectedurls": "^2.1",
         "silverstripe/googlesitemaps": "2.1.9",
+        "silverstripe/login-forms": "^4.3",
 
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
-        "undefinedoffset/silverstripe-nocaptcha": "^2.1",
-        "silverstripe/login-forms": "^4.3"
+        "undefinedoffset/silverstripe-nocaptcha": "^2.1"
+    },
+    "scripts": {
+        "create-zip": [
+            "composer vendor-expose copy",
+            "zip -r \"deploy_$(date +'%d%m%y_%H%M%S').zip\" app",
+            "composer vendor-expose symlink"
+        ],
+        "create-vendor-zip": [
+            "composer vendor-expose copy",
+            "zip -r \"deploy_$(date +'%d%m%y_%H%M%S').zip\" app resources vendor",
+            "composer vendor-expose symlink"
+        ]
     },
     "extra": {
         "project-files-installed": [
