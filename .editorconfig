@@ -10,11 +10,11 @@ end_of_line = lf
 # UTF-8, 4-space-tabs and no trailing whitespace
 [*.{css,scss,php,html,ss}]
 charset = utf-8
-indent_size = 4
+indent_size = 2
 indent_style = space
 trim_trailing_whitespace = true
 
-[*.js]
+[*,{js}]
 charset = utf-8
 indent_size = 2
 indent_style = space

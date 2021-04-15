@@ -7,7 +7,6 @@ $action-color: blue;
 $base-border-color: $color-light-gray;
 $base-border: 1px solid $base-border-color;
 
-
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
@@ -17,34 +16,65 @@ $base-duration: 150ms;
 $base-timing: ease;
 
 fieldset {
-    background-color: transparent;
-    border: 0;
-    margin: 0;
-    padding: 0;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 legend {
-    font-weight: 600;
-    margin-bottom: $small-spacing / 2;
-    padding: 0;
+  font-weight: 600;
+  margin-bottom: $small-spacing / 2;
+  padding: 0;
 }
 
 label {
-    font-size: 17px;
-    color: #565656;
-    letter-spacing: -0.3px;
-    line-height: 24px;
-    display: block;
-    font-weight: normal;
-    margin-bottom: $small-spacing / 2;
+  font-size: 17px;
+  color: #565656;
+  letter-spacing: -0.3px;
+  line-height: 24px;
+  display: block;
+  font-weight: normal;
+  margin-bottom: $small-spacing / 2;
 }
 
 input,
 select,
 textarea {
-    display: block;
-    font-size: 18px;
-    line-height: 22px;
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: $small-spacing / 2;
+}
+
+[type="file"] {
+  margin-bottom: $small-spacing;
+  width: 100%;
+}
+
+select {
+  margin-bottom: $small-spacing;
+  width: 100%;
+  background-position: center right 20px;
+  background-repeat: no-repeat;
+  padding-right: 40px;
+}
+
+[type="submit"] {
+  border: transparent;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.field.dropzonefield {
+  margin-bottom: $small-spacing;
 }
 
 input[type="color"],
@@ -64,67 +94,36 @@ input[type="week"],
 input:not([type]),
 textarea,
 select {
-    appearance: none;
-    background-color: $base-background-color;
-    border: $base-border;
-    border-radius: $base-border-radius;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    padding: $base-spacing / 2;
-    transition: border-color $base-duration $base-timing;
-    width: 100%;
+  appearance: none;
+  background-color: $base-background-color;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: $base-spacing / 2;
+  transition: border-color $base-duration $base-timing;
+  width: 100%;
+
+  &:hover {
+    border-color: shade($base-border-color, 20%);
+  }
+
+  &:focus {
+    border-color: $action-color;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: shade($base-background-color, 5%);
+    cursor: not-allowed;
 
     &:hover {
-        border-color: shade($base-border-color, 20%);
+      border: $base-border;
     }
+  }
 
-    &:focus {
-        border-color: $action-color;
-        box-shadow: $form-box-shadow-focus;
-        outline: none;
-    }
-
-    &:disabled {
-        background-color: shade($base-background-color, 5%);
-        cursor: not-allowed;
-
-        &:hover {
-            border: $base-border;
-        }
-    }
-
-    &::placeholder {
-        color: tint($color-dark-gray, 40%);
-    }
-}
-
-textarea {
-    resize: vertical;
-}
-
-.field.dropzonefield {
-    margin-bottom: $small-spacing;
-}
-
-[type="checkbox"],
-[type="radio"] {
-    display: inline;
-    margin-right: $small-spacing / 2;
-}
-
-[type="file"] {
-    margin-bottom: $small-spacing;
-    width: 100%;
-}
-
-select {
-    margin-bottom: $small-spacing;
-    width: 100%;
-    background-position: center right 20px;
-    background-repeat: no-repeat;
-    padding-right: 40px;
-}
-
-[type="submit"]{
-    border: transparent;
+  &::placeholder {
+    color: tint($color-dark-gray, 40%);
+  }
 }
