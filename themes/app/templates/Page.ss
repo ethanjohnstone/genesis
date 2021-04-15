@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <%-- Generates base element that makes all links relative to it --%>
     <% base_tag %>
-    <title>
-        <% if $SeoTitle %>{$SeoTitle}&nbsp;|<% else_if not $isHome %>{$Title}&nbsp;|<% end_if %>&nbsp;{$SiteConfig.Title}
-    </title>
+    <%--    <title>--%>
+    <%--        <% if $SeoTitle %>{$SeoTitle}&nbsp;|<% else_if not $isHome %>{$Title}&nbsp;|<% end_if %>&nbsp;{$SiteConfig.Title}--%>
+    <%--    </title>--%>
 
     <%-- Set character encoding for the document --%>
     <meta charset="utf-8">
@@ -20,14 +21,14 @@
     <%--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">--%>
 
     <%-- Generates meta data, setting false stops it generating a title tag --%>
-    $MetaTags(false)
+    $MetaTags
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <%-- Require CSS --%>
-    <% require themedCSS('css/dist/app') %>
+    <% require themedCSS('css/dist/main') %>
 
     <%-- Fav icons, etc --%>
     <% include MetaIcons %>
@@ -39,15 +40,10 @@
     <script>
         (function (w, d, s, l, i) {
             w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start':
-                        new Date().getTime(), event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
             j.async = true;
-            j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', '{$SiteConfig.GoogleTagManagerCode}');
     </script>
@@ -58,7 +54,7 @@
     $Layout
 </div>
     <% include Footer %>
-    <% require themedJavascript('javascript/dist/app') %>
+    <% require themedJavascript('javascript/dist/main') %>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript>

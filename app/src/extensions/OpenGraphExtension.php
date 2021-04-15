@@ -53,7 +53,7 @@ class OpenGraphExtension extends DataExtension
     {
         $config = SiteConfig::current_site_config();
         $data = [
-            "Type" => !empty($this->owner->OpenGraphType) ? $this->owner->OpenGraphType : !empty($config->OpenGraphType) ? $config->OpenGraphType : 'website',
+            "Type" => !empty($this->owner->OpenGraphType) ? $this->owner->OpenGraphType : (!empty($config->OpenGraphType) ? $config->OpenGraphType : 'website'),
             "Title" => !empty($this->owner->OpenGraphTitle) ? $this->owner->OpenGraphTitle : $this->owner->Title,
             "SiteName" => $config->Title,
             "Url" => $this->owner->AbsoluteLink(),
