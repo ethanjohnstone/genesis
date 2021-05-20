@@ -17,10 +17,11 @@
         "undefinedoffset/silverstripe-nocaptcha": "^2.1",
         "silverstripe/sharedraftcontent": "^2.3",
         "jonom/silverstripe-betternavigator": "^5.2",
-        "kinglozzer/metatitle": "^2.0",
         "axllent/silverstripe-trailing-slash": "^2.2",
-        "slevomat/coding-standard": "^6.4",
-        "silverstripe/securityreport": "^2.2"
+        "slevomat/coding-standard": "^7.0",
+        "silverstripe/securityreport": "^2.2",
+        "dnadesign/silverstripe-elemental": "^4.5",
+        "silverstripers/seo": "^1.2"
     },
     "scripts": {
         "create-zip": [

@@ -21,7 +21,7 @@
     <%--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">--%>
 
     <%-- Generates meta data, setting false stops it generating a title tag --%>
-    $MetaTags
+    $GenerateMetaTags.RAW
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,8 +33,8 @@
     <%-- Fav icons, etc --%>
     <% include MetaIcons %>
 
-    <%-- Open Graph --%>
-    <% include OpenGraph %>
+
+
 
     <!-- Google Tag Manager -->
     <script>

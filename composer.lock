@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36c9a8141bb7b045975aaca1179b5f30",
+    "content-hash": "130bea5b5536c41d45d5659ff93ec7c9",
     "packages": [
         {
             "name": "axllent/silverstripe-trailing-slash",
@@ -412,6 +412,72 @@
             "time": "2020-12-07T18:04:37+00:00"
         },
         {
+            "name": "dnadesign/silverstripe-elemental",
+            "version": "4.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-elemental.git",
+                "reference": "47f2fc5f26bbfceec11c527a343af30f6f07562e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-elemental/zipball/47f2fc5f26bbfceec11c527a343af30f6f07562e",
+                "reference": "47f2fc5f26bbfceec11c527a343af30f6f07562e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1",
+                "silverstripe/admin": "^1.7@dev",
+                "silverstripe/cms": "^4.7@dev",
+                "silverstripe/graphql": "^3.4",
+                "silverstripe/vendor-plugin": "^1",
+                "silverstripe/versioned": "^1.7@dev",
+                "silverstripe/versioned-admin": "^1.7@dev",
+                "symbiote/silverstripe-gridfieldextensions": "^3.1"
+            },
+            "require-dev": {
+                "silverstripe/recipe-testing": "1.x-dev"
+            },
+            "suggest": {
+                "dnadesign/silverstripe-elemental-subsites": "Adds subsite support to elemental",
+                "dnadesign/silverstripe-elemental-userforms": "Adds userform support to elemental",
+                "dnadesign/silverstripe-elemental-virtual": "Adds support to share blocks between pages",
+                "silverstripe/elemental-blocks": "Adds a set of common SilverStripe content block types",
+                "silverstripe/fulltextsearch": "Adds fulltext search capability for elements using Solr"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client/dist",
+                    "client/lang"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "DNADesign\\Elemental\\": "src/",
+                    "DNADesign\\Elemental\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Saelens",
+                    "email": "alexandre.saelens@dna.co.nz"
+                }
+            ],
+            "description": "Elemental pagetype and collection of Elements",
+            "keywords": [
+                "Content Blocks",
+                "element",
+                "elemental",
+                "silverstripe"
+            ],
+            "time": "2020-11-17T03:11:23+00:00"
+        },
+        {
             "name": "embed/embed",
             "version": "v3.4.15",
             "source": {
@@ -732,52 +798,6 @@
                 }
             ],
             "time": "2020-12-14T22:10:20+00:00"
-        },
-        {
-            "name": "kinglozzer/metatitle",
-            "version": "2.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kinglozzer/silverstripe-metatitle.git",
-                "reference": "cef7853f1b696b5bb030a988a795d8ad4e3c8f27"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kinglozzer/silverstripe-metatitle/zipball/cef7853f1b696b5bb030a988a795d8ad4e3c8f27",
-                "reference": "cef7853f1b696b5bb030a988a795d8ad4e3c8f27",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/cms": "^4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7"
-            },
-            "type": "silverstripe-vendormodule",
-            "autoload": {
-                "psr-4": {
-                    "Kinglozzer\\SilverStripeMetaTitle\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Loz Calver",
-                    "email": "lozcalver@bigfork.co.uk"
-                }
-            ],
-            "description": "Re-adds the 'MetaTitle' field for SilverStripe 4",
-            "homepage": "https://github.com/kinglozzer/silverstripe-metatitle",
-            "keywords": [
-                "meta",
-                "metatitle",
-                "silverstripe",
-                "title"
-            ],
-            "time": "2020-06-22T13:28:54+00:00"
         },
         {
             "name": "league/csv",
@@ -2869,6 +2889,58 @@
                 "versioned"
             ],
             "time": "2021-02-11T00:23:32+00:00"
+        },
+        {
+            "name": "silverstripers/seo",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SilverStripers/seo.git",
+                "reference": "c420e9669fe95ab3319f4e59ba89e36fee7eb64a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SilverStripers/seo/zipball/c420e9669fe95ab3319f4e59ba89e36fee7eb64a",
+                "reference": "c420e9669fe95ab3319f4e59ba89e36fee7eb64a",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/asset-admin": "^1.2.0",
+                "silverstripe/assets": "^1.2.0",
+                "silverstripe/framework": "^4.2.0",
+                "silverstripe/reports": "^4.2.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client/dist",
+                    "client/lang"
+                ],
+                "installer-name": "seo"
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripers\\seo\\Extensions\\": "src/Extensions",
+                    "SilverStripers\\seo\\Fields\\": "src/Fields"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nivanka Fonseka",
+                    "email": "nivanka@silverstripers.com"
+                }
+            ],
+            "description": "SEO for SilverStripe websites",
+            "keywords": [
+                "module",
+                "seo",
+                "silverstripe"
+            ],
+            "time": "2020-03-16T03:16:52+00:00"
         },
         {
             "name": "slevomat/coding-standard",

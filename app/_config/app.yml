@@ -14,9 +14,6 @@ Silverstripe\SiteConfig\SiteConfig:
   extensions:
     - App\Extensions\SiteConfigExtension
 
-Kinglozzer\SilverStripeMetaTitle\MetaTitleExtension:
-  title_format: '$MetaTitle | $SiteConfig.Title'
-
 SilverStripe\Assets\File:
   allowed_extensions: [svg, js]
 
@@ -27,7 +24,3 @@ SilverStripe\Core\Injector\Injector:
 
 SilverStripe\i18n\i18n:
   default_locale: 'en_US'
-
-Page:
-  extensions:
-    - App\Extensions\OpenGraphExtension
