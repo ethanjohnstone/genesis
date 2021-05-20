@@ -8,9 +8,7 @@ namespace {
 
     class Page extends SiteTree
     {
-        private static $db = [
-            "SeoTitle" => "Text"
-        ];
+        private static $db = [];
 
         private static $has_one = [];
 
@@ -19,8 +17,6 @@ namespace {
             $fields = parent::getCMSFields();
 
             $fields->addFieldsToTab("Root.Main", [
-                TextField::create("SeoTitle")
-                    ->setDescription("For if you're wanting to add some fancy flare to your page titles.")
             ], "MenuTitle");
 
             return $fields;

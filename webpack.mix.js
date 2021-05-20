@@ -1,5 +1,9 @@
-let mix = require('laravel-mix');
-let localProxy = 'genesis.test';
+const mix = require("laravel-mix");
+const mqpacker = require("mqpacker");
+require("laravel-mix-eslint");
+require("laravel-mix-stylelint");
+
+let localProxy = "genesis.test";
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,25 +15,66 @@ let localProxy = 'genesis.test';
  |
  */
 
-mix.babel([
-        'app/javascript/src/app.js',
-        'app/javascript/src/hamburger.js',
-    ], 'app/javascript/dist/app.js')
-    .sass('app/css/src/app.scss', 'app/css/dist/')
-    .sass('app/css/src/editor.scss', 'app/css/dist/')
-    .options({
-        postCss: [
-            require('mqpacker')({sort: true}),    // Combines MediaQueries
-            require('postcss-flexbugs-fixes')           // Fixes FlexBox issues
-        ],
-        processCssUrls: false
-    })
-    .extract()
-    .browserSync({
-        proxy: localProxy,
-        injectChanges: true,
-        files: ['app/css/dist/app.css']
-    });
+const environment = process.env.NODE_ENV;
+
+// ESLint configuration
+const eslintRules = {
+  development: {
+    'no-console': 'off',
+  },
+  production: {},
+};
+
+mix
+  .webpackConfig({
+    target: 'web',
+  })
+
+  .eslint({
+    extensions: ['.js'],
+    overrideConfig: {
+      rules: eslintRules[environment] || {},
+    },
+  })
+
+  .js([
+    'themes/app/javascript/src/main.js',
+  ], 'themes/app/javascript/dist/main.js')
+
+  .stylelint({
+    configFile: './.stylelintrc.json',
+    files: ['css/src/**/*.scss'],
+    context: 'themes/app/',
+  })
+
+  .sass('themes/app/css/src/main.scss', 'themes/app/css/dist/')
+  .sass('themes/app/css/src/editor.scss', 'themes/app/css/dist/')
+
+  .options({
+    postCss: [
+      mqpacker({ sort: true }), // Combines MediaQueries
+    ],
+    processCssUrls: false,
+  });
+
+// mix.babel([
+//     'themes/app/javascript/src/app.js',
+//     'themes/app/javascript/src/hamburger.js',
+// ], 'themes/app/javascript/dist/app.js')
+//     .sass('themes/app/css/src/app.scss', 'themes/app/css/dist/')
+//     .sass('themes/app/css/src/editor.scss', 'themes/app/css/dist/')
+//     .options({
+//         postCss: [
+//             require('mqpacker')({sort: true}),    // Combines MediaQueries
+//             require('postcss-flexbugs-fixes')           // Fixes FlexBox issues
+//         ],
+//         processCssUrls: false
+//     })
+//     .browserSync({
+//         proxy: localProxy,
+//         injectChanges: true,
+//         files: ['themes/app/css/dist/app.css']
+//     });
 
 // Full API
 // mix.js(src, output);

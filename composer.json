@@ -14,7 +14,26 @@
         "silverstripe/googlesitemaps": "2.1.9",
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
         "jonom/focuspoint": "^3.1",
-        "undefinedoffset/silverstripe-nocaptcha": "^2.1"
+        "undefinedoffset/silverstripe-nocaptcha": "^2.1",
+        "silverstripe/sharedraftcontent": "^2.3",
+        "jonom/silverstripe-betternavigator": "^5.2",
+        "axllent/silverstripe-trailing-slash": "^2.2",
+        "slevomat/coding-standard": "^7.0",
+        "silverstripe/securityreport": "^2.2",
+        "dnadesign/silverstripe-elemental": "^4.5",
+        "silverstripers/seo": "^1.2"
+    },
+    "scripts": {
+        "create-zip": [
+            "composer vendor-expose copy",
+            "zip -r \"deploy_$(date +'%d%m%y_%H%M%S').zip\" app",
+            "composer vendor-expose symlink"
+        ],
+        "create-vendor-zip": [
+            "composer vendor-expose copy",
+            "zip -r \"deploy_$(date +'%d%m%y_%H%M%S').zip\" app resources vendor",
+            "composer vendor-expose symlink"
+        ]
     },
     "extra": {
         "project-files-installed": [
@@ -33,5 +52,8 @@
             "install.php",
             "web.config"
         ]
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
     }
 }

@@ -15,6 +15,8 @@ assets
 # Ignore sensitive files
 .env
 
+mix-manifest.json
+
 # Ignore editor-related files
 .idea
 .eclipse

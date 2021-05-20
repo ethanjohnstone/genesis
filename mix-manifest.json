@@ -1,7 +1,5 @@
 {
-    "/manifest.js": "/manifest.js",
-    "/app/css/dist/app.css": "/app/css/dist/app.css",
-    "/app/css/dist/editor.css": "/app/css/dist/editor.css",
-    "/vendor.js": "/vendor.js",
-    "/app/javascript/dist/app.js": "/app/javascript/dist/app.js"
+    "/themes/app/javascript/dist/main.js": "/themes/app/javascript/dist/main.js",
+    "/themes/app/css/dist/editor.css": "/themes/app/css/dist/editor.css",
+    "/themes/app/css/dist/main.css": "/themes/app/css/dist/main.css"
 }
