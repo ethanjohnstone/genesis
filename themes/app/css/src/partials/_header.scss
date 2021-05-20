@@ -55,15 +55,18 @@
   padding-bottom: 3px;
   border-bottom: 1px solid transparent;
 
-  &.header__link--active {
-    border-bottom: 1px solid black;
-  }
-
   a {
     color: inherit;
     text-decoration: none;
     display: block;
-    padding: 5px 25px;
+    padding: 5px 0;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    &.current,
+    &.section {
+      border-bottom: 1px solid black;
+    }
   }
 }
 

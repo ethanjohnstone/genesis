@@ -10,8 +10,8 @@
         </button>
         <ul class="header__links">
             <% loop $Menu(1) %>
-                <li class="header__link<% if $isCurrent %> header__link--active<% end_if %>">
-                    <a href="$Link">$MenuTitle</a>
+                <li class="header__link">
+                    <a href="{$Link}" class="{$LinkingMode}">$MenuTitle</a>
                 </li>
             <% end_loop %>
         </ul>
