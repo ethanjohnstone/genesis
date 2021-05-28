@@ -10,24 +10,23 @@ set('application', 'my_project');
 set('repository', 'https://github.com/ethanjohnstone/genesis.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true); 
+set('git_tty', true);
 
-// Shared files/dirs between deploys 
+// Shared files/dirs between deploys
 set('shared_files', []);
 set('shared_dirs', []);
 
-// Writable dirs by web server 
+// Writable dirs by web server
 set('writable_dirs', []);
-
+set('allow_anonymous_stats', false);
 
 // Hosts
 
-host('project.com')
-    ->set('deploy_path', '~/{{application}}');    
-    
+host('deployer.cb.baa.nz')
+    ->user('baa_ss_deploy')
+    ->set('deploy_path', '/httpdocs');
 
 // Tasks
-
 desc('Deploy your project');
 task('deploy', [
     'deploy:info',
@@ -45,9 +44,13 @@ task('deploy', [
     'success'
 ]);
 
-
 task('test', function () {
-    writeln("Hello world");
+    writeln('Hello world');
+});
+
+task('pwd', function () {
+    $result = run('pwd');
+    writeln("Current dir: $result");
 });
 
 // [Optional] If deploy fails automatically unlock.
