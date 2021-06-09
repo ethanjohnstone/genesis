@@ -5,6 +5,8 @@ require 'recipe/common.php';
 
 // Project name
 set('application', 'my_project');
+set('default_stage', 'staging');
+set('keep_releases', 3);
 
 // Project repository
 set('repository', 'https://github.com/ethanjohnstone/genesis.git');
@@ -13,17 +15,32 @@ set('repository', 'https://github.com/ethanjohnstone/genesis.git');
 set('git_tty', true);
 
 // Shared files/dirs between deploys
-set('shared_files', []);
-set('shared_dirs', []);
+set('shared_files', [
+    '.env'
+]);
+
+set('shared_dirs', [
+    'assets',
+    'silverstripe-cache'
+]);
 
 // Writable dirs by web server
 set('writable_dirs', []);
 set('allow_anonymous_stats', false);
 
 // Hosts
-
-host('deployer.cb.baa.nz')
+host('staging')
+    ->stage('staging')
+    ->hostname('deployer.cb.baa.nz')
     ->user('baa_ss_deploy')
+    ->set('branch', 'staging')
+    ->set('deploy_path', '/staging');
+
+host('prod')
+    ->stage('production')
+    ->hostname('deployer.cb.baa.nz')
+    ->user('baa_ss_deploy')
+    ->set('branch', 'production')
     ->set('deploy_path', '/httpdocs');
 
 // Tasks
