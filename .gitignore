@@ -1,5 +1,5 @@
 # Ignore OS-specific files
-.DS_Store 
+.DS_Store
 .Spotlight-V100
 .Trashes
 ehthumbs.db
@@ -21,6 +21,5 @@ assets
 .vscode
 
 # Ignore distribution folders
-dist/
 manifest.js
 vendor.js

@@ -1,0 +1,130 @@
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Avenir", sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.h1 {
+  font: 400 22px/28px "Avenir", sans-serif;
+}
+
+.h2 {
+  font: 400 22px/28px "Avenir", sans-serif;
+}
+
+.h3 {
+  font: 400 16px/24px "Avenir", sans-serif;
+}
+
+.p1 {
+  font: 300 16px/24px "Avenir", sans-serif;
+}
+
+.p2 {
+  font: 400 15px/23px "Avenir", sans-serif;
+}
+
+.p3 {
+  font: 400 13px/16px "Avenir", sans-serif;
+}
+
+.item {
+  font: 400 15px/15px "Avenir", sans-serif;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+img.left {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+img.right {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+
+img.leftAlone {
+  display: block;
+  margin: 0 20px 20px 0;
+}
+
+img.rightAlone {
+  display: block;
+  margin: 0 20px 20px 0;
+}
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .h1 {
+    font: 400 30px/38px "Avenir", sans-serif;
+  }
+  .h2 {
+    font: 400 28px/36px "Avenir", sans-serif;
+  }
+  .h3 {
+    font: 400 20px/30px "Avenir", sans-serif;
+  }
+  .p1 {
+    font: 300 18px/28px "Avenir", sans-serif;
+  }
+  .p2 {
+    font: 400 16px/24px "Avenir", sans-serif;
+  }
+  .p3 {
+    font: 400 13px/16px "Avenir", sans-serif;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .h1 {
+    font: 400 36px/48px "Avenir", sans-serif;
+  }
+  .h2 {
+    font: 400 36px/44px "Avenir", sans-serif;
+  }
+  .h3 {
+    font: 400 20px/30px "Avenir", sans-serif;
+  }
+  .p1 {
+    font: 300 18px/28px "Avenir", sans-serif;
+  }
+  .p2 {
+    font: 400 16px/24px "Avenir", sans-serif;
+  }
+  .p3 {
+    font: 400 14px/18px "Avenir", sans-serif;
+  }
+}
