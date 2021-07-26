@@ -30,7 +30,7 @@
     "laravel-mix-eslint": "^0.2.0",
     "laravel-mix-stylelint": "^0.2.0",
     "resolve-url-loader": "^3.1.2",
-    "sass": "^1.32.8",
+    "sass": "^1.36.0",
     "sass-loader": "^11.0.1",
     "mqpacker": "^7.0.0",
     "postcss": "^8.2.9",
