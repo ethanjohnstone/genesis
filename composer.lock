@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "588fed8a5767cbcce5a916aef1e64ec0",
+    "content-hash": "b0e8b93502d1372e4126b9ac67189d81",
     "packages": [
         {
             "name": "axllent/silverstripe-trailing-slash",
@@ -2172,16 +2172,16 @@
         },
         {
             "name": "silverstripe/googlesitemaps",
-            "version": "2.1.9",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wilr/silverstripe-googlesitemaps.git",
-                "reference": "56b25a424f4ea8484a55e986d707de9b319647fa"
+                "reference": "401f723e7e5354c4d765fdf83a033039cd61cab2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wilr/silverstripe-googlesitemaps/zipball/56b25a424f4ea8484a55e986d707de9b319647fa",
-                "reference": "56b25a424f4ea8484a55e986d707de9b319647fa",
+                "url": "https://api.github.com/repos/wilr/silverstripe-googlesitemaps/zipball/401f723e7e5354c4d765fdf83a033039cd61cab2",
+                "reference": "401f723e7e5354c4d765fdf83a033039cd61cab2",
                 "shasum": ""
             },
             "require": {
@@ -2227,7 +2227,7 @@
                 "seo",
                 "silverstripe"
             ],
-            "time": "2020-11-19T20:53:35+00:00"
+            "time": "2021-01-11T18:11:20+00:00"
         },
         {
             "name": "silverstripe/graphql",
