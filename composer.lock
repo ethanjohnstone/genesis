@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0e8b93502d1372e4126b9ac67189d81",
+    "content-hash": "98eb71f4d0c2d42781c2b9aaa835bb20",
     "packages": [
         {
             "name": "axllent/silverstripe-trailing-slash",
@@ -897,16 +897,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32"
+                "reference": "18634df356bfd4119fe3d6156bdb990c414c14ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
-                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/18634df356bfd4119fe3d6156bdb990c414c14ea",
+                "reference": "18634df356bfd4119fe3d6156bdb990c414c14ea",
                 "shasum": ""
             },
             "require": {
@@ -983,7 +983,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2021-06-23T21:56:05+00:00"
+            "time": "2021-08-17T13:49:42+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -2732,16 +2732,16 @@
         },
         {
             "name": "silverstripe/spamprotection",
-            "version": "3.0.3",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-spamprotection.git",
-                "reference": "3a8702b1fac888016a9f8ee5bf7fe826d4ef3284"
+                "reference": "ca6f507af825dc62f936e635622a4f58d23e3405"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/3a8702b1fac888016a9f8ee5bf7fe826d4ef3284",
-                "reference": "3a8702b1fac888016a9f8ee5bf7fe826d4ef3284",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/ca6f507af825dc62f936e635622a4f58d23e3405",
+                "reference": "ca6f507af825dc62f936e635622a4f58d23e3405",
                 "shasum": ""
             },
             "require": {
@@ -2783,7 +2783,7 @@
                 "silverstripe",
                 "spamprotection"
             ],
-            "time": "2021-02-02T01:09:40+00:00"
+            "time": "2021-05-17T03:09:54+00:00"
         },
         {
             "name": "silverstripe/vendor-plugin",
@@ -4381,16 +4381,16 @@
         },
         {
             "name": "undefinedoffset/silverstripe-nocaptcha",
-            "version": "2.1.0",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/silverstripe-nocaptcha.git",
-                "reference": "655e1448ba575e0a7a6410ae101236908d363c73"
+                "reference": "bac4c581825a4541045a178441986541496ecc77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/silverstripe-nocaptcha/zipball/655e1448ba575e0a7a6410ae101236908d363c73",
-                "reference": "655e1448ba575e0a7a6410ae101236908d363c73",
+                "url": "https://api.github.com/repos/UndefinedOffset/silverstripe-nocaptcha/zipball/bac4c581825a4541045a178441986541496ecc77",
+                "reference": "bac4c581825a4541045a178441986541496ecc77",
                 "shasum": ""
             },
             "require": {
@@ -4423,7 +4423,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "A spam protector and form field using the new Google's reCAPTCHA 2 aka No Captcha",
+            "description": "A spam protector and form field using Google's reCAPTCHA v2 or optionally a foundation v3 implementation",
             "keywords": [
                 "nocaptcha",
                 "recaptcha",
@@ -4431,7 +4431,7 @@
                 "silverstripe",
                 "spamprotection"
             ],
-            "time": "2020-09-09T12:32:34+00:00"
+            "time": "2021-08-24T14:13:36+00:00"
         },
         {
             "name": "webonyx/graphql-php",
