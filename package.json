@@ -15,7 +15,7 @@
     "stylelint": "stylelint themes/app/css/src"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.5",
     "browser-sync-webpack-plugin": "^2.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
