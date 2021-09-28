@@ -29,7 +29,7 @@
     "laravel-mix": "^6.0.31",
     "laravel-mix-eslint": "^0.2.0",
     "laravel-mix-stylelint": "^0.2.0",
-    "resolve-url-loader": "^3.1.2",
+    "resolve-url-loader": "^4.0.0",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
     "mqpacker": "^7.0.0",
