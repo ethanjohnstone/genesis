@@ -760,16 +760,16 @@
         },
         {
             "name": "jonom/silverstripe-betternavigator",
-            "version": "5.2.0",
+            "version": "5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jonom/silverstripe-betternavigator.git",
-                "reference": "96558495becd254cfc49123423b926c2bba9a86b"
+                "reference": "f55bcdadd8672c26c84b2a66ab3d1360e3ede69d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jonom/silverstripe-betternavigator/zipball/96558495becd254cfc49123423b926c2bba9a86b",
-                "reference": "96558495becd254cfc49123423b926c2bba9a86b",
+                "url": "https://api.github.com/repos/jonom/silverstripe-betternavigator/zipball/f55bcdadd8672c26c84b2a66ab3d1360e3ede69d",
+                "reference": "f55bcdadd8672c26c84b2a66ab3d1360e3ede69d",
                 "shasum": ""
             },
             "require": {
@@ -816,7 +816,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-14T22:10:20+00:00"
+            "time": "2021-09-09T20:54:01+00:00"
         },
         {
             "name": "league/csv",
