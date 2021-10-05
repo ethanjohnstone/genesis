@@ -33,7 +33,7 @@
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
     "mqpacker": "^7.0.0",
-    "postcss": "^8.3.8",
+    "postcss": "^8.3.9",
     "postcss-flexbugs-fixes": "^5.0.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
