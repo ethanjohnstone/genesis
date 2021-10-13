@@ -2664,16 +2664,16 @@
         },
         {
             "name": "silverstripe/sharedraftcontent",
-            "version": "2.4.2",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-sharedraftcontent.git",
-                "reference": "c60310e730252cd565532031c8a5f89d8f1ad491"
+                "reference": "ee9206e6f50739ec44550d9fbf1b59e390f44941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-sharedraftcontent/zipball/c60310e730252cd565532031c8a5f89d8f1ad491",
-                "reference": "c60310e730252cd565532031c8a5f89d8f1ad491",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-sharedraftcontent/zipball/ee9206e6f50739ec44550d9fbf1b59e390f44941",
+                "reference": "ee9206e6f50739ec44550d9fbf1b59e390f44941",
                 "shasum": ""
             },
             "require": {
@@ -2718,7 +2718,7 @@
             "keywords": [
                 "silverstripe"
             ],
-            "time": "2021-07-08T21:25:08+00:00"
+            "time": "2021-08-09T10:53:17+00:00"
         },
         {
             "name": "silverstripe/siteconfig",
