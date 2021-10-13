@@ -9,18 +9,18 @@
         }
     ],
     "require": {
-        "silverstripe/recipe-cms": "^4.7",
+        "silverstripe/recipe-cms": "^4.9",
         "silverstripe/redirectedurls": "^2.1",
         "silverstripe/googlesitemaps": "2.2.0",
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
         "jonom/focuspoint": "^4.0",
         "undefinedoffset/silverstripe-nocaptcha": "^2.1",
-        "silverstripe/sharedraftcontent": "^2.3",
-        "jonom/silverstripe-betternavigator": "^5.2",
+        "silverstripe/sharedraftcontent": "^2.5",
+        "jonom/silverstripe-betternavigator": "^5.3",
         "axllent/silverstripe-trailing-slash": "^2.2",
         "slevomat/coding-standard": "^7.0",
-        "silverstripe/securityreport": "^2.2",
-        "dnadesign/silverstripe-elemental": "^4.5",
+        "silverstripe/securityreport": "^2.3",
+        "dnadesign/silverstripe-elemental": "^4.7",
         "silverstripers/seo": "^1.2"
     },
     "scripts": {
