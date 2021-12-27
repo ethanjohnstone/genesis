@@ -11,7 +11,7 @@
     "require": {
         "silverstripe/recipe-cms": "^4.7",
         "silverstripe/redirectedurls": "^2.1",
-        "silverstripe/googlesitemaps": "2.2.0",
+        "silverstripe/googlesitemaps": "2.2.1",
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
         "jonom/focuspoint": "^4.0",
         "undefinedoffset/silverstripe-nocaptcha": "^2.1",
