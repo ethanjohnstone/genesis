@@ -1,0 +1,3 @@
+App\Pages\ContentPage:  
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension
