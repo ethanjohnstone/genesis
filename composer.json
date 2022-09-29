@@ -17,11 +17,10 @@
         }
     ],
     "require": {
-        "silverstripe/recipe-cms": "^4.7",
+        "silverstripe/recipe-cms": "^4",
         "silverstripe/redirectedurls": "^2.1",
         "silverstripe/googlesitemaps": "2.1.9",
         "silverstripe/login-forms": "^4.3",
-
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
         "undefinedoffset/silverstripe-nocaptcha": "^2.1"
     },
@@ -54,5 +53,12 @@
             "install.php",
             "web.config"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/vendor-plugin": true,
+            "silverstripe/recipe-plugin": true
+        }
     }
 }

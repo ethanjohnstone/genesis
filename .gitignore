@@ -1,29 +1,14 @@
-# Ignore OS-specific files
-.DS_Store 
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-# Ignore package folders
-node_modules/
-/resources/
-/vendor/
+# Caches
+/silverstripe-cache/
 
-# Ignore assets
-assets
-
-# Ignore sensitive files
+# Configuration files
 .env
 
-# Ignore editor-related files
-.idea
-.eclipse
-.vscode
+# Dependencies
+/vendor/
+node_modules
 
-# Ignore distribution folders
-dist/
-manifest.js
-vendor.js
-
-# Laravel Mix
-mix-manifest.json
+# Public
+/public/resources/
+/public/css/
+/public/javascript/

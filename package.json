@@ -1,43 +1,25 @@
 {
-  "name": "base-project",
+  "name": "app",
   "version": "1.0.0",
-  "description": "Ye ol basic project starter kit",
-  "main": "index.js",
-  "author": "ethanjohnstone",
+  "author": "NikxDa",
   "public": false,
   "scripts": {
-    "dev": "mix",
-    "watch": "mix watch",
-    "hot": "mix watch --hot",
-    "production": "mix --production",
-    "eslint": "eslint app/javascript/src",
-    "stylelint": "stylelint app/css/src"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.26.14",
-    "browser-sync-webpack-plugin": "^2.2.2",
-    "eslint": "^7.22.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.23.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-vue": "^7.8.0",
-    "eslint-webpack-plugin": "^2.5.3",
-    "laravel-mix": "^6",
-    "laravel-mix-eslint": "^0.2.0",
-    "laravel-mix-stylelint": "^0.2.0",
-    "mqpacker": "^7.0.0",
-    "resolve-url-loader": "^3.1.2",
-    "sass": "^1.32.8",
-    "sass-loader": "^10.1.1",
-    "stylelint": "^13.12.0",
-    "stylelint-config-standard": "^21.0.0",
-    "stylelint-scss": "^3.19.0"
+    "build:js": "esbuild app/javascript/main.tsx --bundle --outfile=public/javascript/main.js --minify --sourcemap",
+    "build:css": "tailwindcss -i app/css/app.css -o public/css/app.css --minify",
+    "build": "npm-run-all --parallel build:*",
+
+    "watch:js": "esbuild app/javascript/main.tsx --bundle --outfile=public/javascript/main.js --sourcemap --watch",
+    "watch:css": "tailwindcss -i app/css/app.css -o public/css/app.css --watch",
+    "watch": "npm-run-all --parallel watch:*"
   },
   "dependencies": {
+    "esbuild": "^0.15.10",
     "minireset.css": "^0.0.7",
-    "react": "^17.0.2",
-    "stylelint-webpack-plugin": "^2.1.1"
+    "react": "^18",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.1.8"
   }
 }
