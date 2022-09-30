@@ -24,18 +24,6 @@
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
         "undefinedoffset/silverstripe-nocaptcha": "^2.1"
     },
-    "scripts": {
-        "create-zip": [
-            "composer vendor-expose copy",
-            "zip -r \"deploy_$(date +'%d%m%y_%H%M%S').zip\" app",
-            "composer vendor-expose symlink"
-        ],
-        "create-vendor-zip": [
-            "composer vendor-expose copy",
-            "zip -r \"deploy_$(date +'%d%m%y_%H%M%S').zip\" app resources vendor",
-            "composer vendor-expose symlink"
-        ]
-    },
     "extra": {
         "project-files-installed": [
             "app/.htaccess",
