@@ -6,8 +6,6 @@
     <title>
         <% if $URLSegment = home %>
             $SiteConfig.Title
-        <% else_if $SeoTitle %>
-            $SeoTitle | $SiteConfig.Title
         <% else %>
             $Title | $SiteConfig.Title
         <% end_if %>
@@ -15,9 +13,6 @@
 
     <%-- Set character encoding for the document --%>
     <meta charset="utf-8">
-
-    <%-- Instruct Internet Explorer to use its latest rendering engine --%>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <%-- Set viewport settings --%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -30,13 +25,10 @@
     $MetaTags(false)
 
     <%-- Require CSS --%>
-    <% require themedCSS("css/dist/main") %>
+    <% require themedCSS("app") %>
 
     <%-- Fav icons, etc --%>
     <% include MetaIcons %>
-
-    <%-- Open Graph --%>
-    <% include OpenGraph %>
 
     <!-- Google Tag Manager -->
     <script>
@@ -51,15 +43,14 @@
     </script>
 </head>
 
-<body class="body">
-    <% include Header %>
+<body class="p-8 flex flex-col min-h-screen justify-center">
+    <main class="max-w-md mx-auto text-center">
+        <h1 class="text-xl font-semibold mb-4">Welcome to SilverStripe</h1>
 
-    <main class="main">
         $Layout
     </main>
 
-    <% include Footer %>
-    <% require themedJavascript("javascript/dist/main.js") %>
+    <% require themedJavascript("javascript/main.js") %>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript>

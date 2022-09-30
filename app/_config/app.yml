@@ -14,7 +14,3 @@ SilverStripe\ORM\Connect\MySQLDatabase:
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
     - App\Extensions\SiteConfigExtension
-
-Page:
-  extensions:
-    - App\Extensions\OpenGraphExtension

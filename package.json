@@ -8,7 +8,7 @@
     "build:css": "tailwindcss -i app/css/app.css -o public/css/app.css --minify",
     "build": "npm-run-all --parallel build:*",
 
-    "watch:js": "esbuild app/javascript/main.tsx --bundle --outfile=public/javascript/main.js --sourcemap --watch",
+    "watch:js": "esbuild app/javascript/main.ts --bundle --outfile=public/javascript/main.js --sourcemap --watch",
     "watch:css": "tailwindcss -i app/css/app.css -o public/css/app.css --watch",
     "watch": "npm-run-all --parallel watch:*"
   },

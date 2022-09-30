@@ -1,5 +1,6 @@
 # Caches
 /silverstripe-cache/
+/.graphql-generated
 
 # Configuration files
 .env
@@ -9,6 +10,4 @@
 node_modules
 
 # Public
-/public/resources/
-/public/css/
-/public/javascript/
+/public/**/*
