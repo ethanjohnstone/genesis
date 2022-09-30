@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /assets
 Disallow: /admin
 
-Sitemap: https://websitepath.co.nz/sitemap.xml
+Sitemap: /sitemap.xml

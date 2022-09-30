@@ -11,3 +11,6 @@ node_modules
 
 # Public
 /public/**/*
+
+# OS files
+.DS_Store

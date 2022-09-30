@@ -45,7 +45,7 @@
 
 <body class="p-8 flex flex-col min-h-screen justify-center">
     <main class="max-w-md mx-auto text-center">
-        <h1 class="text-xl font-semibold mb-4">Welcome to SilverStripe</h1>
+        <div id="root"></div>
 
         $Layout
     </main>
