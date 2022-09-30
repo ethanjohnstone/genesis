@@ -1,6 +1,6 @@
 {
-    "name": "ethanjohnstone/gensis",
-    "description": "Good ol starter theme for SS4 jazz",
+    "name": "bsc/bsc",
+    "description": "A modern SilverStripe starter template",
     "type": "project",
     "authors": [
         {
@@ -18,11 +18,11 @@
     ],
     "require": {
         "silverstripe/recipe-cms": "^4",
-        "silverstripe/redirectedurls": "^2.1",
-        "silverstripe/googlesitemaps": "2.1.9",
-        "silverstripe/login-forms": "^4.3",
-        "symbiote/silverstripe-gridfieldextensions": "^3.2",
-        "undefinedoffset/silverstripe-nocaptcha": "^2.1"
+        "silverstripe/redirectedurls": "^2",
+        "silverstripe/googlesitemaps": "^2",
+        "silverstripe/login-forms": "^4",
+        "symbiote/silverstripe-gridfieldextensions": "^3",
+        "undefinedoffset/silverstripe-nocaptcha": "^2"
     },
     "extra": {
         "project-files-installed": [
